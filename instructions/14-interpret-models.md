@@ -5,6 +5,39 @@ lab:
 # Interpret Models
 
 As machine learning becomes increasingly integral to decisions that affect health, safety, economic wellbeing, and other aspects of people's lives, it's important to be able to understand how models make predictions; and to be able to explain the rationale for machine learning based decisions.
+## Create a compute instance 
+
+ 1. On the **Compute instances** tab, add a new compute instance with the following settings. You'll use this as a workstation to run code in notebooks. 
+
+    - **Region**: *The same region as your workspace* 
+
+    - **Virtual machine type**: CPU 
+
+    - **Virtual machine size**: Standard_DS11_v2 (search for this type in the options) 
+
+    - **Compute name**: *enter a unique name 
+
+    - **Enable SSH access**: Unselected (you can use this to enable direct access to the virtual machine using an SSH client) 
+
+ 2. Wait for the compute instance to start and its status to change to **Running**. 
+
+## Clone and run a notebook 
+
+A lot of data science and machine learning experimentation is performed by running code in *notebooks*. Your compute instance includes fully featured Python notebook environments (*Jupyter* and *JuypyterLab*) that you can use for extensive work; but for basic notebook editing, you can use the built-in **Notebooks** page in Azure Machine learning studio. 
+
+1. In Azure Machine Learning studio, view the **Notebooks** page. 
+
+2. Open a **Terminal**, and ensure its **Compute** is set to your compute instance. 
+
+3. Enter the following commands to clone a Git repository containing notebooks, data, and other files to your workspace: 
+
+    ```bash 
+
+    Use cd Users or cd .. to change into Users directory 
+
+    git clone https://github.com/MicrosoftLearning/mslearn-dp100 
+
+    ```
 
 ## Before You start
 

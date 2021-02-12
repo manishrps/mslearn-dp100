@@ -14,45 +14,34 @@ If you have not already done so, complete the *[Create an Azure Machine Learning
 
 To use Azure Machine Learning designer, you require compute on which to run the model training experiment.
 
-1. Sign into [Azure Machine Learning studio](https://ml.azure.com?azure-portal=true) with the Microsoft credentials associated with your Azure subscription, and select your Azure Machine Learning workspace.
-2. In Azure Machine Learning studio, view the **Compute** page; and on the **Compute instances** tab, start your compute instance if it is not already running. You will use this compute instance to test your trained model.
-3. While the compute instance is starting, switch to the **Compute clusters** tab. If you don't already have an existing compute cluster, add a new compute cluster with the following settings. You will use this cluster to run the training pipeline.
-    - **Region**: *The same region as your workspace*
-    - **Virtual Machine priority**: Dedicated
-    - **Virtual Machine type**: CPU
-    - **Virtual Machine size**: Standard_DS11_v2
-    - **Compute name**: *enter a unique name*
-    - **Minimum number of nodes**: 0
-    - **Maximum number of nodes**: 2
-    - **Idle seconds before scale down**: 120
-    - **Enable SSH access**: Unselected
+1. Sign into [Azure Portal](https://portal.azure.com) with the Microsoft credentials provided in the environments page, search for Machine Learning, slect and click on launch studio to open Azure Machine Learning Workspace.
+2. In Azure Machine Learning studio, view the **Compute** page; and on the **Compute instances** tab, add a new compute instance with the following settings. You'll use this as a workstation to run code in notebooks. 
 
-## Review the training dataset
+    - **Region**: *The same region as your workspace* 
 
-Now that you have some compute resources that you can use to run a training pipeline, you'll need some data to train the model.
+    - **Virtual machine type**: CPU 
 
-1. In Azure Machine Learning studio, view the **Datasets** page. Datasets represent specific data files or tables that you plan to work with in Azure ML.
-2. If you have previously created the **diabetes dataset** dataset, open it. Otherwise, create a new dataset from web files, using the following settings, and then open it:
-    * **Basic Info**:
-        * **Web URL**: https://aka.ms/diabetes-data
-        * **Name**: diabetes dataset
-        * **Dataset type**: Tabular
-        * **Description**: Diabetes data
-    * **Settings and preview**:
-        * **File format**: Delimited
-        * **Delimiter**: Comma
-        * **Encoding**: UTF-8
-        * **Column headers**: Use headers from first file
-        * **Skip rows**: None
-    * **Schema**:
-        * Include all columns other than **Path**
-        * Review the automatically detected types
-    * **Confirm details**:
-        * Do not profile the dataset after creation
+    - **Virtual machine size**: Standard_DS11_v2 
 
-4. View the **Explore** page to see a sample of the data. This data represents details from patients who have been tested for diabetes, and you will use it to train a model that predicts the likelihood of a patient testing positive for diabetes based on clinical measurements.
+    - **Compute name**: *enter a unique name 
 
+    - **Enable SSH access**: Unselected (you can use this to enable direct access to the virtual machine using an SSH client) 
+
+3.Wait for the compute instance to start and its status to change to **Running**. 
+
+4.**Clone and run a notebook:** In Azure Machine Learning studio, view the **Notebooks** page, Open a **Terminal**, and ensure its **Compute** is set to your compute instance, Enter the following commands to clone a Git repository containing notebooks, data, and other files to your workspace: 
+
+    ```bash 
+
+    Use cd Users or cd .. to change into Users directory 
+
+    git clone https://github.com/MicrosoftLearning/mslearn-dp100 
+
+    ```
+4. Switch to the **Datasets** page. Verify the previously created **diabetes dataset** dataset.
+3. Switch to the **Compute clusters** tab. Verify Compute Cluster is running. You will use this cluster to run the training pipeline.
 ## Create a designer pipeline
+4. Switch to the **Datasets** page. Verify the previously created **diabetes dataset** dataset.
 
 To get started with designer, first you must create a pipeline and add the dataset you want to work with.
 
@@ -175,9 +164,3 @@ Now you can test your deployed service from a client application - in this case,
 6. In the notebook, replace the **ENDPOINT** and **PRIMARY_KEY** placeholders with the values for your service, which you can copy from the **Consume** tab on the page for your endpoint.
 7. Run the code cell and view the output returned by your web service.
 
-## Clean-up
-
-The web service you created is hosted in an *Azure Container Instance*. If you don't intend to experiment with it further, you should delete the endpoint to avoid accruing unnecessary Azure usage. You should also stop the compute instance until you need it again.
-
-1. In Azure Machine Learning studio, on the **Endpoints** tab, select the **designer-predict-diabetes** endpoint. Then click the **Delete** (&#128465;) button and confirm that you want to delete the endpoint.
-2. If you're finished working with Azure Machine Learning for now, on the **Compute instances** tab, select your compute instance and click **Stop** to shut it down.

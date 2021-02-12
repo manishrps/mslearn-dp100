@@ -1,0 +1,10 @@
+[ {
+  "Name": "Create an Azure Machine Learning workspace",
+  "Language": "English",
+  "Files": [
+    {
+      "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-dp100/tree/prodInstructions/01-create-a-workspace.md",
+      "Order": 1
+    }
+  ]
+} ]

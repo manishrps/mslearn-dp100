@@ -1,0 +1,10 @@
+[ {
+  "Name": "Tune hyperparameters",
+  "Language": "English",
+  "Files": [
+    {
+      "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-dp100/tree/prodinstructions/11-tune-hyperparameters.md",
+      "Order": 1
+    }
+  ]
+} ]

@@ -1,0 +1,10 @@
+[ {
+  "Name": "Use Automated Machine Learning",
+  "Language": "English",
+  "Files": [
+    {
+      "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-dp100/tree/prodInstructions/02-automated-ml.md",
+      "Order": 1
+    }
+  ]
+} ]

@@ -5,6 +5,39 @@ lab:
 # Run Experiments
 
 Experiments are at the core of a data scientist's work. In Azure Machine Learning, an *experiment* is used to run a script or a pipeline, and usually generates outputs and records metrics. In this exercise, you will use the Azure Machine Learning SDK to run Python code as experiments.
+## Create a compute instance 
+
+ 1. On the **Compute instances** tab, add a new compute instance with the following settings. You'll use this as a workstation to run code in notebooks. 
+
+    - **Region**: *The same region as your workspace* 
+
+    - **Virtual machine type**: CPU 
+
+    - **Virtual machine size**: Standard_DS11_v2 (search for this type in the options) 
+
+    - **Compute name**: *enter a unique name 
+
+    - **Enable SSH access**: Unselected (you can use this to enable direct access to the virtual machine using an SSH client) 
+
+ 2. Wait for the compute instance to start and its status to change to **Running**. 
+
+## Clone and run a notebook 
+
+A lot of data science and machine learning experimentation is performed by running code in *notebooks*. Your compute instance includes fully featured Python notebook environments (*Jupyter* and *JuypyterLab*) that you can use for extensive work; but for basic notebook editing, you can use the built-in **Notebooks** page in Azure Machine learning studio. 
+
+1. In Azure Machine Learning studio, view the **Notebooks** page. 
+
+2. Open a **Terminal**, and ensure its **Compute** is set to your compute instance. 
+
+3. Enter the following commands to clone a Git repository containing notebooks, data, and other files to your workspace: 
+
+    ```bash 
+
+    Use cd Users or cd .. to change into Users directory 
+
+    git clone https://github.com/MicrosoftLearning/mslearn-dp100 
+
+    ```
 
 ## Before You start
 
@@ -46,7 +79,7 @@ The Azure Machine Learning SDK is installed by default on your compute instance.
 
 Experiments in Azure Machine Learning need to be initiated from some sort of *control* layer; often a script or program. In this exercise, you'll use a notebook to control experiments.
 
-1. In the Jupyter home page, browse to the **Users/mslearn-dp100** folder where you cloned the notebook repository, and open the **Run Experiments** notebook.
+1. In the Jupyter home page, browse to the **Users/*{Username}*/mslearn-dp100** folder where you cloned the notebook repository, and open the **Run Experiments** notebook.
 2. Then read the notes in the notebook, running each code cell in turn.
 3. When you have finished running the code in the notebook, on the **File** menu, click **Close and Halt** to close it and shut down its Python kernel. Then close all Jupyter browser tabs.
 

@@ -1,0 +1,10 @@
+[ {
+  "Name": "Monitor a model",
+  "Language": "English",
+  "Files": [
+    {
+      "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-dp100/tree/prodinstructions/16-monitor-a-model.md",
+      "Order": 1
+    }
+  ]
+} ]

@@ -1,0 +1,10 @@
+[ {
+  "Name": "Interpret models",
+  "Language": "English",
+  "Files": [
+    {
+      "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-dp100/tree/prodinstructions/14-interpret-models.md",
+      "Order": 1
+    }
+  ]
+} ]

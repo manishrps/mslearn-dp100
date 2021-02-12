@@ -1,0 +1,10 @@
+[ {
+  "Name": "Explore differential privacy",
+  "Language": "English",
+  "Files": [
+    {
+      "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-dp100/tree/prodinstructions/13-explore-differential-privacy.md",
+      "Order": 1
+    }
+  ]
+} ]

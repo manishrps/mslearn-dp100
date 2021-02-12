@@ -1,0 +1,10 @@
+[ {
+  "Name": "Detect and mitigate unfairness",
+  "Language": "English",
+  "Files": [
+    {
+      "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-dp100/tree/prodinstructions/15-detect-unfairness.md",
+      "Order": 1
+    }
+  ]
+} ]
