@@ -1,8 +1,3 @@
----
-lab:
-    title: 'Create an Azure Machine Learning workspace'
----
-
 # Create and Explore an Azure Machine Learning Workspace
 
 In this exercise, you will create and explore an Azure Machine Learning workspace.
@@ -69,13 +64,13 @@ A lot of data science and machine learning experimentation is performed by runni
 3. Enter the following commands to clone a Git repository containing notebooks, data, and other files to your workspace:
 
     ```bash
-    cd Users
+    Use cd Users or cd .. to change into Users directory (then run the following command)
     git clone https://github.com/MicrosoftLearning/mslearn-dp100
     ```
 
-4. When the command has completed, in the **My files** pane, click **&#8635;** to refresh the view and verify that a new **Users/mslearn-dp100** folder has been created. This folder contains multiple **.ipynb** notebook files.
+4. When the command has completed, in the **My files** pane, click **&#8635;** to refresh the view and verify that a new **Users/mslearn-dp100** or **Users/*{Username}*/mslearn-dp100** folder has been created. This folder contains multiple **.ipynb** notebook files.
 5. Close the terminal pane, terminating the session.
-6. In the **Users/mslearn-dp100** folder, open the **Get Started with Notebooks** notebook. Then read the notes and follow the instructions it contains.
+6. In the **Users/mslearn-dp100** or **Users/*{Username}*/mslearn-dp100** folder, open the **Get Started with Notebooks** notebook. Then read the notes and follow the instructions it contains.
 
 > **Tip**: To run a code cell, select the cell you want to run and then use the **&#9655;** button to run it.
 

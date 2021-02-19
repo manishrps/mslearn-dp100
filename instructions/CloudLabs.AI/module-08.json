@@ -1,0 +1,10 @@
+[ {
+  "Name": "Create a pipeline",
+  "Language": "English",
+  "Files": [
+    {
+      "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-dp100/tree/prodinstructions/08-create-a-pipeline.md",
+      "Order": 1
+    }
+  ]
+} ]

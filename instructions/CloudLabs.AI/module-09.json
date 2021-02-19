@@ -1,0 +1,10 @@
+[ {
+  "Name": "Create a real-time inference service",
+  "Language": "English",
+  "Files": [
+    {
+      "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-dp100/tree/prodinstructions/09-create-realtime-service.md",
+      "Order": 1
+    }
+  ]
+} ]
