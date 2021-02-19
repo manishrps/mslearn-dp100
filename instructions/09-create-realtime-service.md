@@ -1,7 +1,3 @@
----
-lab:
-    title: 'Create a real-time inference service'
----
 # Create a Real-time Inference Service
 
 There's no point in training and registering machine learning models if you don't plan to make them available for applications to use. In this exercise, you'll deploy a model as a web service for real-time inferencing.

@@ -1,7 +1,3 @@
----
-lab:
-    title: 'Create a batch inference service'
----
 # Create a Batch Inferencing Service
 
 In many scenarios, inferencing is performed as a batch process that uses a predictive model to score a large number of cases. To implement this kind of inferencing solution in Azure Machine Learning, you can create a batch inferencing pipeline.

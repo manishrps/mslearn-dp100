@@ -1,7 +1,3 @@
----
-lab:
-    title: 'Monitor a model'
----
 # Monitor a Model
 
 When you deploy a model as a service, it's useful to be able to track information about the requests it processes.
