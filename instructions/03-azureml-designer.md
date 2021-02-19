@@ -2,42 +2,7 @@
 
 Azure Machine Learning *designer* provides a drag & drop environment in which you can define a workflow, or *pipeline* of data ingestion, transformation, and model training modules to create a machine learning model. You can then publish this pipeline as a web service that client applications can use for *inferencing* (generating predictions from new data).
 
-## Before You Start
-
-If you have not already done so, complete the *[Create an Azure Machine Learning Workspace](01-create-a-workspace.md)* exercise to create an Azure Machine Learning workspace and compute instance, and clone the notebooks required for this exercise.
-
-## Configure compute resources
-
-To use Azure Machine Learning designer, you require compute on which to run the model training experiment.
-
-1. Sign into [Azure Portal](https://portal.azure.com) with the Microsoft credentials provided in the environments page, search for Machine Learning, slect and click on launch studio to open Azure Machine Learning Workspace.
-2. In Azure Machine Learning studio, view the **Compute** page; and on the **Compute instances** tab, add a new compute instance with the following settings. You'll use this as a workstation to run code in notebooks. 
-
-    - **Region**: *The same region as your workspace* 
-
-    - **Virtual machine type**: CPU 
-
-    - **Virtual machine size**: Standard_DS11_v2 
-
-    - **Compute name**: *enter a unique name 
-
-    - **Enable SSH access**: Unselected (you can use this to enable direct access to the virtual machine using an SSH client) 
-
-3.Wait for the compute instance to start and its status to change to **Running**. 
-
-4.**Clone and run a notebook:** In Azure Machine Learning studio, view the **Notebooks** page, Open a **Terminal**, and ensure its **Compute** is set to your compute instance, Enter the following commands to clone a Git repository containing notebooks, data, and other files to your workspace: 
-
-    ```bash 
-
-    Use cd Users or cd .. to change into Users directory 
-
-    git clone https://github.com/MicrosoftLearning/mslearn-dp100 
-
-    ```
-4. Switch to the **Datasets** page. Verify the previously created **diabetes dataset** dataset.
-3. Switch to the **Compute clusters** tab. Verify Compute Cluster is running. You will use this cluster to run the training pipeline.
 ## Create a designer pipeline
-4. Switch to the **Datasets** page. Verify the previously created **diabetes dataset** dataset.
 
 To get started with designer, first you must create a pipeline and add the dataset you want to work with.
 

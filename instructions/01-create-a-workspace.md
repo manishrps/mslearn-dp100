@@ -10,7 +10,7 @@ As its name suggests, a workspace is a centralized place to manage all of the Az
 
     - **Subscription**: *Your Azure subscription*
     - **Resource group**: *Create or select a resource group*
-    - **Workspace name**: *quick-starts-ws-{UniqueId}*
+    - **Workspace name**: *Enter a unique name for your workspace*
     - **Region**: *Select the geographical region closest to you*
     - **Storage account**: *Note the default new storage account that will be created for your workspace*
     - **Key vault**: *Note the default new key vault that will be created for your workspace*
@@ -64,13 +64,19 @@ A lot of data science and machine learning experimentation is performed by runni
 3. Enter the following commands to clone a Git repository containing notebooks, data, and other files to your workspace:
 
     ```bash
-Use cd Users or cd .. to change into Users directory and then run the next command
+    Use cd Users or cd .. to change into Users directory (then run the following command)
     git clone https://github.com/MicrosoftLearning/mslearn-dp100
     ```
 
-4. When the command has completed, in the **My files** pane, click **&#8635;** to refresh the view and verify that a new **Users/*{Username}*/mslearn-dp100** folder has been created. This folder contains multiple **.ipynb** notebook files.
+4. When the command has completed, in the **My files** pane, click **&#8635;** to refresh the view and verify that a new **Users/mslearn-dp100** or **Users/*{Username}*/mslearn-dp100** folder has been created. This folder contains multiple **.ipynb** notebook files.
 5. Close the terminal pane, terminating the session.
-6. In the **Users/mslearn-dp100** folder, open the **Get Started with Notebooks** notebook. Then read the notes and follow the instructions it contains.
+6. In the **Users/mslearn-dp100** or **Users/*{Username}*/mslearn-dp100** folder, open the **Get Started with Notebooks** notebook. Then read the notes and follow the instructions it contains.
 
 > **Tip**: To run a code cell, select the cell you want to run and then use the **&#9655;** button to run it.
 
+## Stop your compute instance
+
+If you've finished exploring Azure Machine Learning for now, you should shut down your compute instance to avoid incurring unnecessary charges in your Azure subscription.
+
+1. In Azure Machine Learning studio, on the **Compute** page, select your compute instance.
+2. Click **Stop** to stop your compute instance. When it has shut down, its status will change to **Stopped**.
