@@ -16,30 +16,7 @@ In this exercise, you'll use the visual interface for automated machine learning
 To use automated machine learning, you require compute on which to run the model training experiment.
 
 1. Sign into [Azure Portal](https://portal.azure.com) with the Microsoft credentials provided in the environments page, navigate to resource group and open the resource group **dp-100-uniqueID** open Machine Learning with name **quick-start-ws-uniqueID**, select and click on **launch studio** to open Azure Machine Learning Workspace.
-2. In Azure Machine Learning studio, view the **Compute** page; and on the **Compute instances** tab, add a new compute instance with the following settings. You'll use this as a workstation to run code in notebooks. 
-
-    - **Region**: *The same region as your workspace* 
-
-    - **Virtual machine type**: CPU 
-
-    - **Virtual machine size**: Standard_DS11_v2 
-
-    - **Compute name**: *enter a unique name 
-
-    - **Enable SSH access**: Unselected (you can use this to enable direct access to the virtual machine using an SSH client) 
-
-3.Wait for the compute instance to start and its status to change to **Running**. 
-
-4.**Clone and run a notebook:** In Azure Machine Learning studio, view the **Notebooks** page, Open a **Terminal**, and ensure its **Compute** is set to your compute instance, Enter the following commands to clone a Git repository containing notebooks, data, and other files to your workspace: 
-
-    ```bash 
-
-    Use cd Users or cd .. to change into Users directory 
-
-    git clone https://github.com/MicrosoftLearning/mslearn-dp100 
-
-    ```
-3. Switch to the **Compute clusters** tab, and add a new compute cluster with the following settings. You'll run the automated machine learning experiment on this cluster to take advantage of the ability to distribute the training runs across multiple compute nodes:
+2. Switch to the **Compute clusters** tab, and add a new compute cluster with the following settings. You'll run the automated machine learning experiment on this cluster to take advantage of the ability to distribute the training runs across multiple compute nodes:
     - **Region**: *The same region as your workspace*
     - **Virtual Machine priority**: Dedicated
     - **Virtual Machine type**: CPU
@@ -49,6 +26,7 @@ To use automated machine learning, you require compute on which to run the model
     - **Maximum number of nodes**: 2
     - **Idle seconds before scale down**: 120
     - **Enable SSH access**: Unselected
+
 
 ## Create a dataset
 
