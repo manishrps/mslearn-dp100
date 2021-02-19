@@ -1,15 +1,6 @@
----
-lab:
-    title: 'Create a batch inference service'
----
 # Create a Batch Inferencing Service
 
 In many scenarios, inferencing is performed as a batch process that uses a predictive model to score a large number of cases. To implement this kind of inferencing solution in Azure Machine Learning, you can create a batch inferencing pipeline.
-
-## Before You start
-
-If you have not already done so, complete the *[Create an Azure Machine Learning Workspace](01-create-a-workspace.md)* exercise to create an Azure Machine Learning workspace and compute instance, and clone the notebooks required for this exercise.
-
 ## Open Jupyter
 
 While you can use the **Notebooks** page in Azure Machine Learning studio to run notebooks, it's often more productive to use a more fully-featured notebook development environment like *Jupyter*.
@@ -25,6 +16,3 @@ In this exercise, the code to deploy a model as a batch inferencing service is p
 2. Then read the notes in the notebook, running each code cell in turn.
 3. When you have finished running the code in the notebook, on the **File** menu, click **Close and Halt** to close it and shut down its Python kernel. Then close all Jupyter browser tabs.
 
-## Clean-up
-
-If you're finished working with Azure Machine Learning for now, in Azure Machine Learning studio, on the **Compute** page, on the **Compute Instances** tab, select your compute instance and click **Stop** to shut it down. Otherwise, leave it running for the next lab.

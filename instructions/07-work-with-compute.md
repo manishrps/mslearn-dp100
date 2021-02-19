@@ -1,17 +1,8 @@
----
-lab:
-    title: 'Work with compute'
----
 # Work with Compute
 
 All Python code runs in the context of an environment, which determines the Python packages available. The code can be run in an environment on your local workstation, or on some other compute target; such as a cluster for increased scalability.
 
 In this exercise, you'll explore *environments* and *compute targets*, which you can use to run experiments in Azure Machine Learning.
-
-## Before You start
-
-If you have not already done so, complete the *[Create an Azure Machine Learning Workspace](01-create-a-workspace.md)* exercise to create an Azure Machine Learning workspace and compute instance, and clone the notebooks required for this exercise.
-
 ## Open Jupyter
 
 While you can use the **Notebooks** page in Azure Machine Learning studio to run notebooks, it's often more productive to use a more fully-featured notebook development environment like *Jupyter*.
@@ -27,6 +18,3 @@ In this exercise, the code to work with compute is provided in a notebook.
 2. Then read the notes in the notebook, running each code cell in turn.
 3. When you have finished running the code in the notebook, on the **File** menu, click **Close and Halt** to close it and shut down its Python kernel. Then close all Jupyter browser tabs.
 
-## Clean-up
-
-If you're finished working with Azure Machine Learning for now, in Azure Machine Learning studio, on the **Compute** page, on the **Compute Instances** tab, select your compute instance and click **Stop** to shut it down. Otherwise, leave it running for the next lab.

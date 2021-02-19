@@ -1,0 +1,10 @@
+[ {
+  "Name": "Work with compute",
+  "Language": "English",
+  "Files": [
+    {
+      "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-dp100/tree/prodinstructions/07-work-with-compute.md",
+      "Order": 1
+    }
+  ]
+} ]

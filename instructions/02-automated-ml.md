@@ -1,8 +1,3 @@
----
-lab:
-    title: 'Use Automated Machine Learning'
----
-
 # Use Automated Machine Learning
 
 Azure Machine Learning includes an *automated machine learning* capability that leverages the scalability of cloud compute to automatically try multiple pre-processing techniques and model-training algorithms in parallel to find the best performing supervised machine learning model for your data.
@@ -11,26 +6,22 @@ In this exercise, you'll use the visual interface for automated machine learning
 
 > **Note**: You can also use automated machine learning through the Azure Machine Learning SDK.
 
-## Before you start
-
-If you have not already done so, complete the *[Create an Azure Machine Learning Workspace](01-create-a-workspace.md)* exercise to create an Azure Machine Learning workspace and compute instance, and clone the notebooks required for this exercise.
-
 ## Configure compute resources
 
 To use automated machine learning, you require compute on which to run the model training experiment.
 
-1. Sign into [Azure Machine Learning studio](https://ml.azure.com?azure-portal=true) with the Microsoft credentials associated with your Azure subscription, and select your Azure Machine Learning workspace.
-2. In Azure Machine Learning studio, view the **Compute** page; and on the **Compute instances** tab, start your compute instance if it is not already running. You will use this compute instance to test your trained model.
-3. While the compute instance is starting, switch to the **Compute clusters** tab, and add a new compute cluster with the following settings. You'll run the automated machine learning experiment on this cluster to take advantage of the ability to distribute the training runs across multiple compute nodes:
+1. Sign into [Azure Portal](https://portal.azure.com) with the Microsoft credentials provided in the environments page, navigate to resource group and open the resource group **dp-100-uniqueID** open Machine Learning with name **quick-start-ws-uniqueID**, select and click on **launch studio** to open Azure Machine Learning Workspace.
+2. Switch to the **Compute clusters** tab, and add a new compute cluster with the following settings. You'll run the automated machine learning experiment on this cluster to take advantage of the ability to distribute the training runs across multiple compute nodes:
     - **Region**: *The same region as your workspace*
     - **Virtual Machine priority**: Dedicated
     - **Virtual Machine type**: CPU
     - **Virtual Machine size**: Standard_DS11_v2
-    - **Compute name**: *enter a unique name*
+    - **Compute name**: *enter name as notebook-{UniqueId}*
     - **Minimum number of nodes**: 0
     - **Maximum number of nodes**: 2
     - **Idle seconds before scale down**: 120
     - **Enable SSH access**: Unselected
+
 
 ## Create a dataset
 
@@ -121,14 +112,8 @@ After you've used automated machine learning to train some models, you can deplo
 Now that you've deployed a service, you can test it using some simple code.
 
 1. With the **Consume** page for the **auto-predict-diabetes** service page open in your browser, open a new browser tab and open a second instance of Azure Machine Learning studio. Then in the new tab, view the **Notebooks** page.
-2. In the **Notebooks** page, under **My files**, browse to the **Users/mslearn-dp100** folder where you cloned the notebook repository, and open the **Get AutoML Prediction** notebook.
+2. In the **Notebooks** page, under **My files**, browse to the **Users/mslearn-dp100** or **Users/*{Username}*/mslearn-dp100** folder where you cloned the notebook repository, and open the **Get AutoML Prediction** notebook.
 3. When the notebook has opened, ensure that the compute instance you created previously is selected in the **Compute** box, and that it has a status of **Running**.
 4. In the notebook, replace the **ENDPOINT** and **PRIMARY_KEY** placeholders with the values for your service, which you can copy from the **Consume** tab on the page for your endpoint.
 5. Run the code cell and view the output returned by your web service.
 
-## Clean-up
-
-The web service you created is hosted in an *Azure Container Instance*. If you don't intend to experiment with it further, you should delete the endpoint to avoid accruing unnecessary Azure usage. You should also stop the compute instance until you need it again.
-
-1. In Azure Machine Learning studio, on the **Endpoints** tab, select the **auto-predict-diabetes** endpoint. Then select **Delete** (&#128465;) and confirm that you want to delete the endpoint.
-2. On the **Compute** page, on the **Compute Instances** tab, select your compute instance and then select **Stop**.
