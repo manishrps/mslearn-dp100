@@ -18,3 +18,5 @@ In this exercise, the code to run an automated machine learning experiment is pr
 2. Then read the notes in the notebook, running each code cell in turn.
 3. When you have finished running the code in the notebook, on the **File** menu, click **Close and Halt** to close it and shut down its Python kernel. Then close all Jupyter browser tabs.
 
+
+
