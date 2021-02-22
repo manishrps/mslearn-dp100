@@ -6,11 +6,11 @@ In this exercise, you will create and explore an Azure Machine Learning workspac
 
 As its name suggests, a workspace is a centralized place to manage all of the Azure ML assets you need to work on a machine learning project.
 
-1. In the [Azure portal](https://portal.azure.com), create a new **Machine Learning** resource, specifying the following settings:
+1. Login into the [Azure portal](https://portal.azure.com) with the credentials provided, and in search option, search for **machine learning** and select Machine learning and click on **+New** to create a new **Machine Learning** resource, specifying the following settings:
 
     - **Subscription**: *Your Azure subscription*
-    - **Resource group**: *Create or select a resource group*
-    - **Workspace name**: *Enter a unique name for your workspace*
+    - **Resource group**: Select **dp-100-{UniqueId}**
+    - **Workspace name**: *quick-starts-ws-{UniqueId}*
     - **Region**: *Select the geographical region closest to you*
     - **Storage account**: *Note the default new storage account that will be created for your workspace*
     - **Key vault**: *Note the default new key vault that will be created for your workspace*
@@ -74,9 +74,3 @@ A lot of data science and machine learning experimentation is performed by runni
 
 > **Tip**: To run a code cell, select the cell you want to run and then use the **&#9655;** button to run it.
 
-## Stop your compute instance
-
-If you've finished exploring Azure Machine Learning for now, you should shut down your compute instance to avoid incurring unnecessary charges in your Azure subscription.
-
-1. In Azure Machine Learning studio, on the **Compute** page, select your compute instance.
-2. Click **Stop** to stop your compute instance. When it has shut down, its status will change to **Stopped**.
