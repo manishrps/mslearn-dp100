@@ -48,5 +48,5 @@
 
   > **Tip**: To run a code cell, select the cell you want to run and then use the **&#9655;** button to run it.
 
-
-
+13. Click **Next** to perform this module.
+ 
