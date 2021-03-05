@@ -19,7 +19,9 @@ As its name suggests, a workspace is a centralized place to manage all of the Az
 
     > **Note**: When you create an Azure Machine Learning workspace, you can use some advanced options to restrict access through a *private endpoint* and specify custom keys for data encryption. We won't use these options in this exercise - but you should be aware of them!
 
-2. When the workspace and its associated resources have been created, view the workspace in the portal.
+2. Click on **Review+create**
+
+3. When the workspace and its associated resources have been created, view the workspace in the portal.
 
 ## Explore Azure Machine Learning studio
 
