@@ -55,6 +55,9 @@ One of the benefits of Azure Machine Learning is the ability to create cloud-bas
     - **Show advanced settings**: Note the following settings, but do not select them:
         - **Enable virtual network**: Unselected (you would typically use this in an enterprise environment to enhance network security)
         - **Assign to another user**: Unselected (you can use this to assign a compute instance to a data scientist)
+
+4. Click on **create** button
+
 3. Wait for the compute instance to start and its status to change to **Running**.
 
 ## Clone and run a notebook
