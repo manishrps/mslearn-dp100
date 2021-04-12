@@ -1,17 +1,19 @@
 
 # Clone the repo to perform the lab
 
-1. After signed into azure portal using the credentials given, Search for **Resource Groups** in the search bar or click on **Resource Groups** that you see in the homepage.
+1. After signed into azure portal using the credentials provided, Search for **Resource Groups** in the search bar.
 
 1. Then you will find the **dp-100-xxxxxx**, where xxxxxx is the deployment id of the lab. Click on **dp-100-xxxxxx** to find the resources for the lab.
 
     ![](images/img1.png)
 
-1. Find the machine learning workspace named **quick-start-ws-xxxxxx**.
+    **Note**: Deployment ID can be obtained from the Lab Environment output page.
+
+1. Find the machine learning workspace named **quick-start-ws-xxxxxx**, Click to open it.
 
     ![](images/img2.png)
     
-1. Click on **Launch Studio** to open the machine learning studio. Close the pop-up that appears.
+1. Click on **Launch Studio** to open the machine learning studio in new tab. If any pop-up appears close them.
 
     ![](images/img3.png)
     
@@ -19,15 +21,15 @@
 
     ![](images/img4.png)
     
-1. Under **compute instances** you can find **notebookxxxxxx**. Click on **Jupyter** to run the notebook to perform the lab. A lot of data science and machine learning experimentation is performed by running code in *notebooks*. Your compute instance includes fully featured Python notebook environments (*Jupyter* and *JuypyterLab*) that you can use for extensive work; but for basic notebook editing, you can use the built-in **Notebooks** page in Azure Machine learning studio.
+1. Under **compute instances** you can find **notebookxxxxxx**. Click on **Jupyter** (make sure to click on **Jupyter** not **JupyterLab**) to run the notebook to perform the lab. A lot of data science and machine learning experimentation is performed by running code in *notebooks*. Your compute instance includes fully featured Python notebook environments (*Jupyter* and *JuypyterLab*) that you can use for extensive work.
 
     ![](images/img5.png)
     
-1. A pop-up appears, Tick **Yes, I Understand** and click on **Continue**.
+1. A pop-up appears, select **Yes, I Understand** and click on **Continue**.
 
     ![](images/img6.png)
     
-1. The Jupyter will open in a new window, Click on **New** to open the terminal.
+1. The Jupyter will open in a new window, Click on **New** then select **Terminal** to open new terminal.
 
     ![](images/img7.png)
     
@@ -51,7 +53,7 @@
 
 13. If asked to provide **compute cluster** during the lab , then please provide compute cluster name as **aml-compute**. Also you can find it under **Compute -> Compute clusters**. 
 
-14. Click **Next** to perform this module.
+14. Click on **Next** to continue module.
 
 
 
