@@ -1,5 +1,7 @@
 # Create and Explore an Azure Machine Learning Workspace
 
+## Overview
+
 In this exercise, you will create and explore an Azure Machine Learning workspace.
 
 ## Create an Azure Machine Learning workspace
