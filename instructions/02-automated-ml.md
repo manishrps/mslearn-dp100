@@ -22,6 +22,10 @@ To use automated machine learning, you require compute on which to run the model
     - **Idle seconds before scale down**: 120
     - **Enable SSH access**: Unselected
 
+   
+    ![](images/test1.png)
+    
+    ![](images/additionalconfigsettings2.png)
 
 ## Create a dataset
 
@@ -31,10 +35,14 @@ Now that you have some compute resources that you can use to process data, you'l
 
 2. In Azure Machine Learning studio, view the **Datasets** page. Datasets represent specific data files or tables that you plan to work with in Azure ML.
 3. Create a new dataset from local files, using the following settings:
+
+    ![](images/datasets1.png)
+    
     * **Basic Info**:
         * **Name**: diabetes dataset
         * **Dataset type**: Tabular
         * **Description**: Diabetes data
+    ![](images/datasets2.png)
     * **Datastore and file selection**:
         * **Select or create a datastore**: Currently selected datastore
         * **Select files for your dataset**: Browse to the **diabetes.csv** file you downloaded.
@@ -46,13 +54,19 @@ Now that you have some compute resources that you can use to process data, you'l
         * **Encoding**: UTF-8
         * **Column headers**: Use headers from first file
         * **Skip rows**: None
+
+    ![](images/datasets3.png)
     * **Schema**:
         * Include all columns other than **Path**
         * Review the automatically detected types
     * **Confirm details**:
         * Do not profile the dataset after creation
+    ![](images/datasets4.png)
 4. After the dataset has been created, open it and view the **Explore** page to see a sample of the data. This data represents details from patients who have been tested for diabetes, and you will use it to train a model that predicts the likelihood of a patient testing positive for diabetes based on clinical measurements.
 
+
+    ![](images/datasets5.png)
+    
     > **Note**: You can optionally generate a *profile* of the dataset to see more statistical details.
 
 ## Run an automated machine learning experiment
@@ -61,12 +75,16 @@ In Azure Machine Learning, operations that you run are called *experiments*. Fol
 
 1. In Azure Machine Learning studio, view the **Automated ML** page (under **Author**).
 2. Create a new Automated ML run with the following settings:
+
+   ![](images/step-1-run.png)
+
     - **Select dataset**:
         - **Dataset**: diabetes dataset
     - **Configure run**:
         - **New experiment name**: mslearn-automl-diabetes
         - **Target column**: Diabetic (*this is the label the model will be trained to predict)*
         - **Select compute cluster**: *the compute cluster you created previously*
+    ![](images/ste2configrun.png)
     - **Task type and settings**:
         - **Task type**: Classification
         - **Additional configuration settings:**
@@ -76,13 +94,24 @@ In Azure Machine Learning, operations that you run are called *experiments*. Fol
             - **Exit criterion**:
                 - **Training job time (hours)**: 0.5 - *this causes the experiment to end after a maximum of 30 minutes.*
                 - **Metric score threshold**: 0.90 - *this causes the experiment to end if a model achieves a weighted AUC metric of 90% or higher.*
-        - **Featurization settings:**
+
+    ![](images/additionalconfigsettings.png)
+    ![](images/additionalconfigsettings2.png)
+
+      - **Featurization settings:**
             - **Enable featurization**: Selected - *this causes Azure Machine Learning to automatically preprocess the features before training.*
+   
+    ![](images/featuredconfig1.png)
 
 3. When you finish submitting the automated ML run details, it will start automatically. You can observe the status of the run in the **Properties** pane.
+
+    
 4. When the run status changes to *Running*, view the **Models** tab and observe as each possible combination of training algorithm and pre-processing steps is tried and the performance of the resulting model is evaluated. The page will automatically refresh periodically, but you can also select **&#8635; Refresh**. It may take ten minutes or so before models start to appear, as the cluster nodes need to be initialized and the data featurization process completed before training can begin. Now might be a good time for a coffee break!
 5. Wait for the experiment to finish.
 
+    ![](images/properties.png)
+    
+    
 ## Review the best model
 
 After the experiment has finished; you can review the best performing model that was generated (note that in this case, we used exit criteria to stop the experiment - so the "best" model found by the experiment may not be the best possible model, just the best one found within the time and metric constraints allowed for this exercise!).
@@ -91,6 +120,9 @@ After the experiment has finished; you can review the best performing model that
 2. Select the **Algorithm name** for the best model to view the child-run that produced it.
 
     The best model is identified based on the evaluation metric you specified (*AUC_Weighted*). To calculate this metric, the training process used some of the data to train the model, and applied a technique called *cross-validation* to iteratively test the trained model with data it wasn't trained with and compare the predicted value with the actual known value. From these comparisons, a *confusion matrix* of true-positives, false-positives,true-negatives, and false-negatives is tabulated and additional classification metrics calculated - including a Receiving Operator Curve (ROC) chart that compares the True-Positive rate and False-Positive rate. The area under this curve (AUC) us a common metric used to evaluate classification performance.
+
+    ![](images/step22.png)
+
 3. Next to the *AUC_Weighted* value, select **View all other metrics** to see values of other possible evaluation metrics for a classification model.
 4. Select the **Metrics** tab and review the performance metrics you can view for the model. These include a **confusion_matrix** visualization showing the confusion matrix for the validated model, and an **accuracy_table** visualization that includes the ROC chart.
 5. Select the **Explanations** tab, and view the **Global Importance** chart. This shows the extent to which each feature in the dataset influences the label prediction.
@@ -107,19 +139,32 @@ After you've used automated machine learning to train some models, you can deplo
     - **Description**: Predict diabetes
     - **Compute type**: ACI
     - **Enable authentication**: Selected
+
+    ![](images/predectivestep2.png)
+
+
 3. Wait for the deployment to start - this may take a few seconds. Then, on the **Model** tab, in the **Model summary** section, observe the **Deploy status** for the **auto-predict-diabetes** service, which should be **Running**. Wait for this status to change to **Successful**. You may need to select **&#8635; Refresh** periodically.
+
+    ![](images/predectivestep3.png)
+
 4. In Azure Machine Learning studio, view the **Endpoints** page and select the **auto-predict-diabetes** real-time endpoint. Then select the **Consume** tab and note the following information there. You need this information to connect to your deployed service from a client application.
     - The REST endpoint for your service
     - the Primary Key for your service
+
+    ![](images/predectivestep4-1.png)
+    ![](images/predectivestep4-2.png)
+
 5. Note that you can use the &#10697; link next to these values to copy them to the clipboard.
 
 ## Test the deployed service
 
 Now that you've deployed a service, you can test it using some simple code.
 
-1. With the **Consume** page for the **auto-predict-diabetes** service page open in your browser, open a new browser tab and open a second instance of Azure Machine Learning studio. Then in the new tab, view the **Notebooks** page.
+1. With the **Consume** page for the **auto-predict-diabetes** service page opened in your browser, Duplicate the page in the New tab of Azure Machine Learning studio. Then in the new tab , view the **Notebooks** page.
 2. In the **Notebooks** page, under **My files**, browse to the **Users/mslearn-dp100** folder where you cloned the notebook repository, and open the **Get AutoML Prediction** notebook.
-3. When the notebook has opened, ensure that the compute instance you created previously is selected in the **Compute** box, and that it has a status of **Running**.
+3. When the notebook has opened, ensure that the compute instance **Notebook-XXXXXX** is selected in the **Compute** box, and that it has a status of **Running**.
 4. In the notebook, replace the **ENDPOINT** and **PRIMARY_KEY** placeholders with the values for your service, which you can copy from the **Consume** tab on the page for your endpoint.
 5. Run the code cell and view the output returned by your web service.
+
+    ![](images/final1.png)
 
