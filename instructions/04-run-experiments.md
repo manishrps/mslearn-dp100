@@ -1,6 +1,7 @@
 # Run Experiments
 
 Experiments are at the core of a data scientist's work. In Azure Machine Learning, an *experiment* is used to run a script or a pipeline, and usually generates outputs and records metrics. In this exercise, you will use the Azure Machine Learning SDK to run Python code as experiments.
+
 ## Open Jupyter
 
 While you can use the **Notebooks** page in Azure Machine Learning studio to run notebooks, it's often more productive to use a more fully-featured notebook development environment like *Jupyter*. Fortunately, your Azure Machine Learning compute instance includes an installation of Jupyter.
@@ -10,24 +11,34 @@ While you can use the **Notebooks** page in Azure Machine Learning studio to run
 1. In [Azure Machine Learning studio](https://ml.azure.com), view the **Compute** page for your workspace; and on the **Compute Instances** tab, start your compute instance if it is not already running.
 2. When the compute instance is running, click the **Jupyter** link to open the Jupyter home page in a new browser tab. Be sure to open *Jupyter* and not *JupyterLab*.
 
+    ![](images/jupyter.png)
+
 ## Verify the Azure Machine Learning SDK is Installed
 
 The Azure Machine Learning SDK is installed by default on your compute instance. Follow these steps to verify the installation.
 
 1. In the Jupyter notebook environment, create a new **Terminal**. This will open a new tab with a command shell.
-2. Enter the following command to update the Azure ML SDK:
+
+    ![](images/img7.png)
+    ![](images/img8.png)    
+
+3. Enter the following command to update the Azure ML SDK:
 
     ```bash
     pip show azureml-sdk
     ```
 
-    Note the version of the SDK package installed.
+    ![](images/pip1.png) 
+    
+   - Note the version of the SDK package installed.
 
 3. The **azureml-sdk** SDK package provides the most important libraries needed to work with Azure Machine Learning> However, there are some additional packages that contain other useful libraries not included in the main SDK package. Use the following command to verify that the **azureml-widgets** package, which contains libraries for displaying Azure Machine Learning information in notebooks, is also installed:
 
     ```bash
     pip show azureml-widgets
     ```
+
+    ![](images/pip2.png)
 
 4. Close the **Terminal** tab and return to the tab containing the Jupyter home page.
 
@@ -37,7 +48,10 @@ The Azure Machine Learning SDK is installed by default on your compute instance.
 
 Experiments in Azure Machine Learning need to be initiated from some sort of *control* layer; often a script or program. In this exercise, you'll use a notebook to control experiments.
 
-1. In the Jupyter home page, browse to the **Users/*{Username}*/mslearn-dp100** folder where you cloned the notebook repository, and open the **Run Experiments** notebook.
+1. In the Jupyter home page, browse to the **Users/mslearn-dp100** or **Users/*{Username}*/mslearn-dp100** folder where you cloned the notebook repository, and click on **Run Experiments** (04 - Run Experiments.ipynb) notebook to open in the new tab.
+
+    ![](images/runexp.png)
+
 2. Then read the notes in the notebook, running each code cell in turn.
 3. When you have finished running the code in the notebook, on the **File** menu, click **Close and Halt** to close it and shut down its Python kernel. Then close all Jupyter browser tabs.
 
