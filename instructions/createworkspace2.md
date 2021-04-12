@@ -42,7 +42,7 @@
     git clone https://github.com/MicrosoftLearning/mslearn-dp100
     ```
 
-1. Once completed running the commands it should look like the below image. Then close the terminal window and go back to the jupyter window.
+1. After running the commands you will get the output as shown in below image. Then close the terminal window browser tab and go back to the jupyter window.
 
     ![](images/img9.png)
 
