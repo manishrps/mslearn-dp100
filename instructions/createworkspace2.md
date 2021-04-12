@@ -53,7 +53,7 @@
 
 13. If asked to provide **compute cluster** during the lab , then please provide compute cluster name as **aml-compute**. Also you can find it under **Compute -> Compute clusters**. 
 
-14. Click on **Next** to continue to next module in this lab.
+14. Click on **Next** to continue to the next module in this lab.
 
 
 
