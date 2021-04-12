@@ -68,8 +68,9 @@ One of the benefits of Azure Machine Learning is the ability to create cloud-bas
         - **Assign to another user**: Unselected (you can use this to assign a compute instance to a data scientist)
 
     ![](images/computeinstance.png)
+    ![](images/computeinstance2.png)
 
-4. Click on **create** button
+4. Click on **Create** button
 
 3. Wait for the compute instance to start and its status to change to **Running**.
 
