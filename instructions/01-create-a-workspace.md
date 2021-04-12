@@ -9,17 +9,17 @@ As its name suggests, a workspace is a centralized place to manage all of the Az
 1. Login into the [Azure portal](https://portal.azure.com) with the credentials provided, and in search option, search for **machine learning** and select Machine learning and click on **+New** to create a new **Machine Learning** resource, specifying the following settings:
 
     - **Subscription**: *Your Azure subscription*
-    - **Resource group**: Select **dp-100-{UniqueId}**
-    - **Workspace name**: *quick-starts-ws-{UniqueId}*
-    - **Region**: *Select the geographical region closest to you*
+    - **Resource group**: Select **dp-100-{DeploymentID}**
+    - **Workspace name**: **quick-starts-ws-{DeploymentID}**
+    - **Region**: **Select the geographical region closest to you**
     - **Storage account**: *Note the default new storage account that will be created for your workspace*
     - **Key vault**: *Note the default new key vault that will be created for your workspace*
     - **Application insights**: *Note the default new application insights resource that will be created for your workspace*
     - **Container registry**: None (*one will be created automatically the first time you deploy a model to a container*)
 
-    > **Note**: When you create an Azure Machine Learning workspace, you can use some advanced options to restrict access through a *private endpoint* and specify custom keys for data encryption. We won't use these options in this exercise - but you should be aware of them!
+    **Note**: Deployment ID can be obtained from the Lab Environment output page. When you create an Azure Machine Learning workspace, you can use some advanced options to restrict access through a *private endpoint* and specify custom keys for data encryption. We won't use these options in this exercise - but you should be aware of them!
 
-2. Click on **Review+create**
+2. Click on **Review+create** then click on **Create**.
 
 3. When the workspace and its associated resources have been created, view the workspace in the portal.
 
@@ -38,7 +38,7 @@ You can manage some workspace assets in the Azure portal, but for data scientist
 
 One of the benefits of Azure Machine Learning is the ability to create cloud-based compute on which you can run experiments and training scripts at scale.
 
-1. In Azure Machine Learning studio, view the **Compute** page. This is where you'll manage compute resources for your data science activities. There are four kinds of compute resource you can create:
+1. In Azure Machine Learning studio, view the **Compute** page on the left panel. This is where you'll manage compute resources for your data science activities. There are four kinds of compute resource you can create:
     - **Compute instances**: Development workstations that data scientists can use to work with data and models.
     - **Compute clusters**: Scalable clusters of virtual machines for on-demand processing of experiment code.
     - **Inference clusters**: Deployment targets for predictive services that use your trained models.
@@ -64,16 +64,17 @@ One of the benefits of Azure Machine Learning is the ability to create cloud-bas
 
 A lot of data science and machine learning experimentation is performed by running code in *notebooks*. Your compute instance includes fully featured Python notebook environments (*Jupyter* and *JuypyterLab*) that you can use for extensive work; but for basic notebook editing, you can use the built-in **Notebooks** page in Azure Machine learning studio.
 
-1. In Azure Machine Learning studio, view the **Notebooks** page.
-2. Open a **Terminal**, and ensure its **Compute** is set to your compute instance.
+1. In Azure Machine Learning studio, view the **Notebooks** page on the left panel.
+2. On the **Files** pane menu open a **Terminal**, and ensure its **Compute** is set to your compute instance.
 3. Enter the following commands to clone a Git repository containing notebooks, data, and other files to your workspace:
 
+   - Use cd Users or cd .. to change into Users directory (then run the following command)
+
     ```bash
-    Use cd Users or cd .. to change into Users directory (then run the following command)
     git clone https://github.com/MicrosoftLearning/mslearn-dp100
     ```
 
-4. When the command has completed, in the **My files** pane, click **&#8635;** to refresh the view and verify that a new **Users/mslearn-dp100** or **Users/*{Username}*/mslearn-dp100** folder has been created. This folder contains multiple **.ipynb** notebook files.
+4. When the command has completed, in the **Files** pane, click **&#8635;** to refresh the view and verify that a new **Users/mslearn-dp100** or **Users/*{Username}*/mslearn-dp100** folder has been created. This folder contains multiple **.ipynb** notebook files.
 5. Close the terminal pane, terminating the session.
 6. In the **Users/mslearn-dp100** or **Users/*{Username}*/mslearn-dp100** folder, open the **Get Started with Notebooks** notebook. Then read the notes and follow the instructions it contains.
 
