@@ -4,7 +4,7 @@ Experiments are at the core of a data scientist's work. In Azure Machine Learnin
 
 ## Open Jupyter
 
-While you can use the **Notebooks** page in Azure Machine Learning studio to run notebooks, it's often more productive to use a more fully-featured notebook development environment like *Jupyter*. Fortunately, your Azure Machine Learning compute instance includes an installation of Jupyter.
+While you can use the **Notebooks** page in Azure Machine Learning studio to run notebooks, it's often more productive to use a more fully-featured notebook development environment like *Jupyter*.
 
 > **Tip**: Jupyter Notebook is a commonly used open source tool for data science. You can refer to the [documentation](https://jupyter-notebook.readthedocs.io/en/stable/notebook.html) if you are unfamiliar with it.
 
