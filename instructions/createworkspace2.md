@@ -51,9 +51,9 @@
   > **Tip**: To run a code cell, select the cell you want to run and then use the **&#9655;** button to run it.
 
 
-13. If asked to provide **compute cluster** during the lab , then please provide compute cluster name as **aml-compute**. Also you can find it under **Compute -> Compute clusters**. 
+1. If asked to provide **compute cluster** during the lab , then please provide compute cluster name as **aml-compute**.
 
-14. Click on **Next** to continue to the next module in this lab.
+1. Click on **Next** to continue to the next module in this lab.
 
 
 
