@@ -1,5 +1,7 @@
 # Use Automated Machine Learning
 
+## Overview
+
 Azure Machine Learning includes an *automated machine learning* capability that leverages the scalability of cloud compute to automatically try multiple pre-processing techniques and model-training algorithms in parallel to find the best performing supervised machine learning model for your data.
 
 In this exercise, you'll use the visual interface for automated machine learning in Azure Machine Learning studio
@@ -10,22 +12,30 @@ In this exercise, you'll use the visual interface for automated machine learning
 
 To use automated machine learning, you require compute on which to run the model training experiment.
 
-1. Sign into [Azure Portal](https://portal.azure.com) with the Microsoft credentials provided in the environments page, navigate to resource group and open the resource group **dp-100-uniqueID** open Machine Learning with name **quick-start-ws-uniqueID**, select and click on **launch studio** to open Azure Machine Learning Workspace.
-2. Switch to the **Compute clusters** tab, and add a new compute cluster with the following settings. You'll run the automated machine learning experiment on this cluster to take advantage of the ability to distribute the training runs across multiple compute nodes:
+1. Sign into Azure Portal(https://portal.azure.com) with the login credentials provided in the environment details page, navigate to resource groups and open the resource group **dp-100-{DeploymentID}** 
+
+    **Note**: Deployment ID can be obtained from the Lab Environment details page.
+
+2. Click on Machine Learning with name **quick-start-ws-{DeploymentID}** from the list of resources, then click on **launch studio** to open Azure Machine Learning Workspace.
+
+3. Switch to the **Compute** tab on the left panel then click on **Compute clusters** tab.
+
+4.  Click on **+ New** to add a new compute cluster with the following settings. You'll run the automated machine learning experiment on this cluster to take advantage of the ability to distribute the training runs across multiple compute nodes:
+
     - **Region**: *The same region as your workspace*
     - **Virtual Machine priority**: Dedicated
     - **Virtual Machine type**: CPU
     - **Virtual Machine size**: Standard_DS11_v2
-    - **Compute name**: *enter name as aml-compute*
+    - Select **Next**
+    - **Compute name**: enter name as *aml-compute*
     - **Minimum number of nodes**: 0
     - **Maximum number of nodes**: 2
     - **Idle seconds before scale down**: 120
     - **Enable SSH access**: Unselected
-
-   
+  
     ![](images/test1.png)
     
-    ![](images/additionalconfigsettings2.png)
+    ![](images/additional1.png)
 
 ## Create a dataset
 
