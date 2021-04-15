@@ -8,7 +8,7 @@ While you can use the **Notebooks** page in Azure Machine Learning studio to run
 
 > **Tip**: Jupyter Notebook is a commonly used open-source tool for data science. You can refer to the [documentation](https://jupyter-notebook.readthedocs.io/en/stable/notebook.html) if you are unfamiliar with it.
 
-1. In the LabVM browser open Azure Machine Learning Studio(https://ml.azure.com), view the **Compute** page for your workspace.
+1. In the LabVM browser open Azure Machine Learning Studio(https://ml.azure.com). If prompted, login using the credentials provided in the **Environment Details** tab. View the **Compute** page for your workspace.
 
     **Note**: If you get **Welcome to the studio** page when you login, Select **Subscription** and **Machine Learning workspace** available in the drop down then click on **Get Started**.
 
