@@ -37,7 +37,7 @@ The Azure Machine Learning SDK is installed by default on your compute instance.
     
    - Note the version of the SDK package installed.
 
-3. The **azureml-sdk** SDK package provides the most important libraries needed to work with Azure Machine Learning However, some additional packages contain other useful libraries not included in the main SDK package. Use the following command to verify that the **azureml-widgets** package, which contains libraries for displaying Azure Machine Learning information in notebooks, is also installed:
+3. The **azureml-sdk** SDK package provides the most important libraries needed to work with Azure Machine Learning. However, some additional packages contain other useful libraries not included in the main SDK package. Use the following command to verify that the **azureml-widgets** package, which contains libraries for displaying Azure Machine Learning information in notebooks, is also installed:
 
     ```bash
     pip show azureml-widgets
