@@ -169,11 +169,10 @@ After you've used automated machine learning to train some models, you can deplo
 2. Use the **Deploy** button to deploy the model with the following settings:
     - **Name**: auto-predict-diabetes
     - **Description**: Predict diabetes
-    - **Compute type**: ACI
+    - **Compute type**: Azure Container Instance
     - **Enable authentication**: Selected
 
     ![](images/predectivestep2.png)
-
 
 3. Wait for the deployment to start - this may take a few seconds. Then, on the **Model** tab, in the **Model summary** section, observe the **Deploy status** for the **auto-predict-diabetes** service, which should be **Running**. Wait for this status to change to **Successful**. You may need to select **&#8635; Refresh** periodically.
 
@@ -196,11 +195,10 @@ Now that you've deployed a service, you can test it using some simple code.
 
 2. In the **Notebooks** page, under **My files**, browse to the **Users/mslearn-dp100** folder where you cloned the notebook repository, and open the **Get AutoML Prediction** notebook.
 
-3. When the notebook has opened, ensure that the compute instance **Notebook-XXXXXX** is selected in the **Compute** box, and that it has a status of **Running**.
+3. When the notebook has opened, ensure that the compute instance **Notebook-{DeploymentID}** is selected in the **Compute** box, and that it has a status of **Running**.
 
 4. In the notebook, replace the **ENDPOINT** and **PRIMARY_KEY** placeholders with the values for your service, which you can copy from the **Consume** tab on the page for your endpoint.
 
 5. Run the code cell and view the output returned by your web service.
 
     ![](images/final1.png)
-
