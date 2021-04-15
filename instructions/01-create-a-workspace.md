@@ -8,7 +8,8 @@ In this exercise, you will create and explore an Azure Machine Learning workspac
 
 As its name suggests, a workspace is a centralized place to manage all of the Azure ML assets you need to work on a machine learning project.
 
-1. In the LabVM, login into the Azure portal(https://portal.azure.com) with the credentials provided in the **Environment Details** tab, On the top search bar, search for **machine learning** and select Machine learning then click on **+New** or **Create** to create a new **Machine Learning** resource, specifying the following settings:
+1. Open `Azure portal` in the virtual machine provided on the left side, login using the credentials provided in the **Environment Details** tab.
+2. On the top search bar, search for **machine learning** and select Machine learning then click on **+New** or **Create** to create a new **Machine Learning** resource, specifying the following settings:
 
     - **Subscription**: *Your Azure subscription*
     - **Resource group**: Select **dp-100-{DeploymentID}**
@@ -19,26 +20,33 @@ As its name suggests, a workspace is a centralized place to manage all of the Az
     - **Application insights**: *Note the default new application insights resource that will be created for your workspace*
     - **Container registry**: None (*one will be created automatically the first time you deploy a model to a container*)
 
-    **Note**: Deployment ID can be obtained from the Lab Environment output page. When you create an Azure Machine Learning workspace, you can use some advanced options to restrict access through a *private endpoint* and specify custom keys for data encryption. We won't use these options in this exercise - but you should be aware of them!
+```
+Note: 
+    
+You can find the `DeploymentID` under lab Environment Detail tab.
+    
+When you create an Azure Machine Learning workspace, you can use some advanced options to restrict access through a *private endpoint* and specify custom keys for data encryption. We won't use these options in this exercise - but you should be aware of them!
+```
 
-    ![](images/mlcreate.png)
+  ![](images/mlcreate.png)
 
-2. Click on **Review+create** then click on **Create**.
+3. Click on **Review+create** then click on **Create**.
 
-3. When the deployment is completed, verify workspace and its associated resources in the **dp-100-{DeploymentID}** Resource Group.
+4. When the deployment is completed, verify workspace and its associated resources in the **dp-100-{DeploymentID}** Resource Group.
 
 ## Explore Azure Machine Learning studio
 
 You can manage some workspace assets in the Azure portal, but for data scientists, this tool contains lots of irrelevant information and links that relate to managing general Azure resources. *Azure Machine Learning studio* provides a dedicated web portal for working with your workspace.
 
-1. On the Azure portal blade in the top search bar, search for **machine learning** and select Machine learning you created in previous task. On the **Overview** page click on the **launch studio** open your machine learning workspace in new tab; or alternatively, in a new browser tab, open [https://ml.azure.com](https://ml.azure.com). If prompted, sign in using the Microsoft account you used in the previous task and select your Azure subscription and workspace.
+1. On the Azure portal blade in the top search bar, search for **machine learning** and select Machine learning you created in previous task. 
+2. On the **Overview** page click on the **launch studio** it will open your machine learning workspace in new tab. Alternatively in a new browser tab, open [https://ml.azure.com](https://ml.azure.com). If prompted, sign in using the Microsoft account you used in the previous task and select your Azure subscription and workspace.
 
     ![](images/launchml.png)
 
     > **Tip** If you have multiple Azure subscriptions, you need to choose the Azure *directory* in which the subscription is defined; then choose the subscription, and finally choose the workspace.
 
-2. View the Azure Machine Learning studio interface for your workspace - you can manage all of the assets in your workspace from here.
-3. In Azure Machine Learning studio, toggle the &#9776; icon at the top left to show and hide the various pages in the interface. You can use these pages to manage the resources in your workspace.
+3. View the Azure Machine Learning studio interface for your workspace - you can manage all of the assets in your workspace from here.
+4. In Azure Machine Learning studio, toggle the &#9776; icon at the top left to show and hide the various pages in the interface. You can use these pages to manage the resources in your workspace.
 
     ![](images/mldashboard.png)
 
