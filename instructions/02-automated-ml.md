@@ -130,6 +130,7 @@ In Azure Machine Learning, operations that you run are called *experiments*. Fol
 3. When you finish submitting the automated ML run details, it will start automatically. You can observe the status of the run in the **Properties** pane.
 
 4. When the run status changes to *Running*, view the **Models** tab and observe as each possible combination of training algorithm and pre-processing steps is tried and the performance of the resulting model is evaluated. The page will automatically refresh periodically, but you can also select **&#8635; Refresh**. It may take ten minutes or so before models start to appear, as the cluster nodes need to be initialized and the data featurization process completed before training can begin. Now might be a good time for a coffee break!
+
 5. Wait for the experiment to finish.
 
     ![](images/properties.png)
@@ -140,25 +141,31 @@ In Azure Machine Learning, operations that you run are called *experiments*. Fol
 After the experiment has finished; you can review the best performing model that was generated (note that in this case, we used exit criteria to stop the experiment - so the "best" model found by the experiment may not be the best possible model, just the best one found within the time and metric constraints allowed for this exercise!).
 
 1. On the **Details** tab of the automated machine learning run, note the best model summary.
+
 2. Select the **Algorithm name** for the best model to view the child-run that produced it.
 
-    The best model is identified based on the evaluation metric you specified (*AUC_Weighted*). To calculate this metric, the training process used some of the data to train the model, and applied a technique called *cross-validation* to iteratively test the trained model with data it wasn't trained with and compare the predicted value with the actual known value. From these comparisons, a *confusion matrix* of true-positives, false-positives,true-negatives, and false-negatives is tabulated and additional classification metrics calculated - including a Receiving Operator Curve (ROC) chart that compares the True-Positive rate and False-Positive rate. The area under this curve (AUC) us a common metric used to evaluate classification performance.
+ - The best model is identified based on the evaluation metric you specified (*AUC_Weighted*). To calculate this metric, the training process used some of the data to train the model, and applied a technique called *cross-validation* to iteratively test the trained model with data it wasn't trained with and compare the predicted value with the actual known value. 
+ - From these comparisons, a *confusion matrix* of true-positives, false-positives,true-negatives, and false-negatives is tabulated and additional classification metrics calculated - including a Receiving Operator Curve (ROC) chart that compares the True-Positive rate and False-Positive rate. The area under this curve (AUC) us a common metric used to evaluate classification performance.
 
     ![](images/step22.png)
 
 3. Next to the *AUC_Weighted* value, select **View all other metrics** to see values of other possible evaluation metrics for a classification model.
+
 4. Select the **Metrics** tab and review the performance metrics you can view for the model. These include a **confusion_matrix** visualization showing the confusion matrix for the validated model, and an **accuracy_table** visualization that includes the ROC chart.
 
     ![](images/step44.png)
+
 5. Select the **Explanations** tab, and view the **Global Importance** chart. This shows the extent to which each feature in the dataset influences the label prediction.
 
 ## Deploy a predictive service
 
 After you've used automated machine learning to train some models, you can deploy the best performing model as a service for client applications to use.
 
-> **Note**: In Azure Machine Learning, you can deploy a service as an Azure Container Instances (ACI) or to an Azure Kubernetes Service (AKS) cluster. For production scenarios, an AKS deployment is recommended, for which you must create an *inference cluster* compute target. In this exercise, you'll use an ACI service, which is a suitable deployment target for testing, and does not require you to create an inference cluster.
+ - In Azure Machine Learning, you can deploy a service as an Azure Container Instances (ACI) or to an Azure Kubernetes Service (AKS) cluster. For production scenarios, an AKS deployment is recommended, for which you must create an *inference cluster* compute target. 
+ - In this exercise, you'll use an ACI service, which is a suitable deployment target for testing, and does not require you to create an inference cluster.
 
 1. Select the **Details** tab for the run that produced the best model.
+
 2. Use the **Deploy** button to deploy the model with the following settings:
     - **Name**: auto-predict-diabetes
     - **Description**: Predict diabetes
@@ -186,9 +193,13 @@ After you've used automated machine learning to train some models, you can deplo
 Now that you've deployed a service, you can test it using some simple code.
 
 1. With the **Consume** page for the **auto-predict-diabetes** service page opened in your browser, Duplicate the page in the New tab of Azure Machine Learning studio. Then in the new tab , view the **Notebooks** page.
+
 2. In the **Notebooks** page, under **My files**, browse to the **Users/mslearn-dp100** folder where you cloned the notebook repository, and open the **Get AutoML Prediction** notebook.
+
 3. When the notebook has opened, ensure that the compute instance **Notebook-XXXXXX** is selected in the **Compute** box, and that it has a status of **Running**.
+
 4. In the notebook, replace the **ENDPOINT** and **PRIMARY_KEY** placeholders with the values for your service, which you can copy from the **Consume** tab on the page for your endpoint.
+
 5. Run the code cell and view the output returned by your web service.
 
     ![](images/final1.png)
