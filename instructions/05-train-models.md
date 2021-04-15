@@ -24,10 +24,13 @@ While you can use the **Notebooks** page in Azure Machine Learning studio to run
 
 In this exercise, the code to train models is provided in a notebook.
 
-1. In the Jupyter home page, browse to the **Users/mslearn-dp100** or **Users/*{Username}*/mslearn-dp100** folder where you cloned the notebook repository, and open the **Train Models** (05 - Train Models.ipynb) notebook.
+1. In the Jupyter home page, browse to the **Users/mslearn-dp100** or **Users/*{Username}*/mslearn-dp100** folder where you cloned the notebook repository. 
+
+2. Click on **Train Models** (05 - Train Models.ipynb) notebook to open in the new tab.
 
     ![](images/train.png)
 
-2. Then read the notes in the notebook, running each code cell in turn.
-3. When you have finished running the code in the notebook, on the **File** menu, click **Close and Halt** to close it and shut down its Python kernel. Then close all Jupyter browser tabs.
+3. Then read the notes in the notebook, running each code cell in turn. To run each cell select and click on **Run** on the menu.
+
+4. When you have finished running the code in the notebook, on the **File** menu, click **Close and Halt** to close it and shut down its Python kernel. Then close all Jupyter browser tabs.
 
