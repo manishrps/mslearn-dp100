@@ -37,13 +37,16 @@ To use automated machine learning, you require compute on which to run the model
     
     ![](images/additional1.png)
 
+5. Click on **Create**.
+
 ## Create a dataset
 
 Now that you have some compute resources that you can use to process data, you'll need a way to store and ingest the data to be processed.
 
-1. View the comma-separated data at https://aka.ms/diabetes-data in your web browser. Then save this as a local file named **diabetes.csv** (it doesn't matter where you save it).
+1. On the LabVM browser open new tab and browse https://aka.ms/diabetes-data. Then save this as a local file named **diabetes.csv** (it doesn't matter where you save it).
 
-2. In Azure Machine Learning studio, view the **Datasets** page. Datasets represent specific data files or tables that you plan to work with in Azure ML.
+2. In Azure Machine Learning studio, view the **Datasets** page on the left panel. Datasets represent specific data files or tables that you plan to work with in Azure ML.
+
 3. Create a new dataset from local files, using the following settings:
 
     ![](images/datasets1.png)
@@ -52,28 +55,35 @@ Now that you have some compute resources that you can use to process data, you'l
         * **Name**: diabetes dataset
         * **Dataset type**: Tabular
         * **Description**: Diabetes data
+        
     ![](images/datasets2.png)
+    
     * **Datastore and file selection**:
         * **Select or create a datastore**: Currently selected datastore
         * **Select files for your dataset**: Browse to the **diabetes.csv** file you downloaded.
         * **Upload path**: *Leave the default selection*
         * **Skip data validation**: Not selected
+        
+    ![](images/page2.png)        
+    
     * **Settings and preview**:
         * **File format**: Delimited
         * **Delimiter**: Comma
         * **Encoding**: UTF-8
         * **Column headers**: Use headers from first file
         * **Skip rows**: None
-
+        
     ![](images/datasets3.png)
+    
     * **Schema**:
         * Include all columns other than **Path**
         * Review the automatically detected types
     * **Confirm details**:
         * Do not profile the dataset after creation
+        
     ![](images/datasets4.png)
-4. After the dataset has been created, open it and view the **Explore** page to see a sample of the data. This data represents details from patients who have been tested for diabetes, and you will use it to train a model that predicts the likelihood of a patient testing positive for diabetes based on clinical measurements.
 
+4. After the dataset has been created, open it and view the **Explore** page to see a sample of the data. This data represents details from patients who have been tested for diabetes, and you will use it to train a model that predicts the likelihood of a patient testing positive for diabetes based on clinical measurements.
 
     ![](images/datasets5.png)
     
@@ -83,7 +93,8 @@ Now that you have some compute resources that you can use to process data, you'l
 
 In Azure Machine Learning, operations that you run are called *experiments*. Follow the steps below to run an experiment that uses automated machine learning to train a classification model that predicts diabetes diagnoses.
 
-1. In Azure Machine Learning studio, view the **Automated ML** page (under **Author**).
+1. In Azure Machine Learning studio, view the **Automated ML** page from the left panel under **Author**.
+
 2. Create a new Automated ML run with the following settings:
 
    ![](images/step-1-run.png)
@@ -94,7 +105,9 @@ In Azure Machine Learning, operations that you run are called *experiments*. Fol
         - **New experiment name**: mslearn-automl-diabetes
         - **Target column**: Diabetic (*this is the label the model will be trained to predict)*
         - **Select compute cluster**: *the compute cluster you created previously*
+        
     ![](images/ste2configrun.png)
+    
     - **Task type and settings**:
         - **Task type**: Classification
         - **Additional configuration settings:**
@@ -112,10 +125,10 @@ In Azure Machine Learning, operations that you run are called *experiments*. Fol
             - **Enable featurization**: Selected - *this causes Azure Machine Learning to automatically preprocess the features before training.*
    
     ![](images/featuredconfig1.png)
-
+    ![](images/additionalconfigsettings3.png)
+    
 3. When you finish submitting the automated ML run details, it will start automatically. You can observe the status of the run in the **Properties** pane.
 
-    
 4. When the run status changes to *Running*, view the **Models** tab and observe as each possible combination of training algorithm and pre-processing steps is tried and the performance of the resulting model is evaluated. The page will automatically refresh periodically, but you can also select **&#8635; Refresh**. It may take ten minutes or so before models start to appear, as the cluster nodes need to be initialized and the data featurization process completed before training can begin. Now might be a good time for a coffee break!
 5. Wait for the experiment to finish.
 
