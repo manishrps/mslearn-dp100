@@ -23,9 +23,9 @@ As its name suggests, a workspace is a centralized place to manage all of the Az
 ```
 Note: 
     
-You can find the `DeploymentID` under lab Environment Detail tab.
+You can find the DeploymentID under the lab Environment Detail tab.
     
-When you create an Azure Machine Learning workspace, you can use some advanced options to restrict access through a *private endpoint* and specify custom keys for data encryption. We won't use these options in this exercise - but you should be aware of them!
+When you create an Azure Machine Learning workspace, you can use some advanced options to restrict access through a private endpoint and specify custom keys for data encryption. We won't use these options in this exercise - but you should be aware of them!
 ```
 
   ![](images/mlcreate.png)
@@ -38,8 +38,8 @@ When you create an Azure Machine Learning workspace, you can use some advanced o
 
 You can manage some workspace assets in the Azure portal, but for data scientists, this tool contains lots of irrelevant information and links that relate to managing general Azure resources. *Azure Machine Learning studio* provides a dedicated web portal for working with your workspace.
 
-1. On the Azure portal blade in the top search bar, search for **machine learning** and select Machine learning you created in previous task. 
-2. On the **Overview** page click on the **launch studio** it will open your machine learning workspace in new tab. Alternatively in a new browser tab, open [https://ml.azure.com](https://ml.azure.com). If prompted, sign in using the Microsoft account you used in the previous task and select your Azure subscription and workspace.
+1. On the `Azure portal` blade in the top search bar, search for **machine learning** and select Machine learning you created in the previous task. 
+2. On the **Overview** page click on the **launch studio** it will open your machine learning workspace in a new tab. Alternatively in a new browser tab, open [https://ml.azure.com](https://ml.azure.com). If prompted, login using the credentials provided in the **Environment Details** tab and select your Azure subscription and workspace.
 
     ![](images/launchml.png)
 
@@ -52,9 +52,9 @@ You can manage some workspace assets in the Azure portal, but for data scientist
 
 ## Create a compute instance
 
-One of the benefits of Azure Machine Learning is the ability to create cloud-based compute on which you can run experiments and training scripts at scale.
+One of the benefits of `Azure Machine Learning` is the ability to create cloud-based compute on which you can run experiments and training scripts at scale.
 
-1. In Azure Machine Learning studio, view the **Compute** page on the left panel. This is where you'll manage compute resources for your data science activities. There are four kinds of compute resource you can create:
+1. In `Azure Machine Learning Studio`, view the **Compute** page on the left panel. This is where you'll manage compute resources for your data science activities. There are four kinds of compute resource you can create:
     - **Compute instances**: Development workstations that data scientists can use to work with data and models.
     - **Compute clusters**: Scalable clusters of virtual machines for on-demand processing of experiment code.
     - **Inference clusters**: Deployment targets for predictive services that use your trained models.
@@ -78,13 +78,13 @@ One of the benefits of Azure Machine Learning is the ability to create cloud-bas
     ![](images/computeinstance.png)
     ![](images/computeinstance2.png)
 
-4. Click on **Create** button
+3. Click on the **Create** button
 
-3. Wait for the compute instance to start and its status to change to **Running**.
+4. Wait for the compute instance to start and it's status to change to **Running**.
 
 ## Clone and run a notebook
 
-A lot of data science and machine learning experimentation is performed by running code in *notebooks*. Your compute instance includes fully featured Python notebook environments (*Jupyter* and *JuypyterLab*) that you can use for extensive work; but for basic notebook editing, you can use the built-in **Notebooks** page in Azure Machine learning studio.
+A lot of data science and machine learning experimentation is performed by running code in *notebooks*. Your compute instance includes fully featured Python notebook environments (*Jupyter* and *JuypyterLab*) that you can use for extensive work, but for basic notebook editing, you can use the built-in **Notebooks** page in Azure Machine learning studio.
 
 1. In Azure Machine Learning studio, view the **Notebooks** page on the left panel.
 2. On the **Files** pane menu open a **Terminal**, and ensure its **Compute** is set to your compute instance.
