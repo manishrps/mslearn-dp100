@@ -1,6 +1,52 @@
 # Use Azure Machine Learning Designer
 
+## Overview
+
 Azure Machine Learning *designer* provides a drag & drop environment in which you can define a workflow, or *pipeline* of data ingestion, transformation, and model training modules to create a machine learning model. You can then publish this pipeline as a web service that client applications can use for *inferencing* (generating predictions from new data).
+
+## Create a dataset
+
+Now that you have some compute resources that you can use to process data, you'll need a way to store and ingest the data to be processed.
+
+1. On the LabVM browser open new tab and browse https://aka.ms/diabetes-data. Then save this as a local file named **diabetes.csv** (it doesn't matter where you save it).
+
+2. In Azure Machine Learning studio, view the **Datasets** page on the left panel. Datasets represent specific data files or tables that you plan to work with in Azure ML.
+
+3. Create a new dataset from local files, using the following settings:
+
+    ![](images/datasets1.png)
+    
+    * **Basic Info**:
+        * **Name**: diabetes dataset
+        * **Dataset type**: Tabular
+        * **Description**: Diabetes data
+        
+    ![](images/datasets2.png)
+    
+    * **Datastore and file selection**:
+        * **Select or create a datastore**: Currently selected datastore
+        * **Select files for your dataset**: Browse to the **diabetes.csv** file you downloaded.
+        * **Upload path**: *Leave the default selection*
+        * **Skip data validation**: Not selected
+        
+    ![](images/page2.png)        
+    
+    * **Settings and preview**:
+        * **File format**: Delimited
+        * **Delimiter**: Comma
+        * **Encoding**: UTF-8
+        * **Column headers**: Use headers from first file
+        * **Skip rows**: None
+        
+    ![](images/datasets3.png)
+    
+    * **Schema**:
+        * Include all columns other than **Path**
+        * Review the automatically detected types
+    * **Confirm details**:
+        * Do not profile the dataset after creation
+        
+    ![](images/datasets4.png)
 
 ## Create a designer pipeline
 
@@ -25,6 +71,7 @@ To get started with designer, first you must create a pipeline and add the datas
     ![new-pipeline](images/dd.png)
 
 5. Select the **diabetes dataset** module on the canvas. Then right-click it, and on the **Visualize** menu, select **Dataset output**.
+
 6. Review the schema of the data, noting that you can see the distributions of the various columns as histograms. Then close the visualization.
 
 ## Add transformations
@@ -32,6 +79,7 @@ To get started with designer, first you must create a pipeline and add the datas
 Before you can train a model, you typically need to apply some preprocessing transformations to the data.
 
 1. In the pane on the left, expand the **Data Transformation** section, which contains a wide range of modules you can use to transform data before model training.
+
 2. Drag a **Normalize Data** module to the canvas, below the **diabetes dataset** module. Then connect the output from the **diabetes dataset** module to the input of the **Normalize Data** module.
 
     ![new-pipeline](images/connection.png)
@@ -51,6 +99,7 @@ Before you can train a model, you typically need to apply some preprocessing tra
     **Note**: We're normalizing the numeric columns put them on the same scale, and avoid columns with large values dominating model training. You'd normally apply a whole bunch of pre-processing transformations like this to prepare your data for training, but we'll keep things simple in this exercise.
 
 4. Now we're ready to split the data into separate datasets for training and validation. In the pane on the left, in the **Data Transformations** section, drag a **Split Data** module onto the canvas under the **Normalize Data** module. Then connect the *Transformed Dataset* (left) output of the **Normalize Data** module to the input of the **Split Data** module.
+
 5. Select the **Split Data** module, and configure its settings as follows:
     * **Splitting mode** Split Rows
     * **Fraction of rows in the first output dataset**: 0.7
@@ -64,6 +113,7 @@ Before you can train a model, you typically need to apply some preprocessing tra
 With the data prepared and split into training and validation datasets, you're ready to configure the pipeline to train and evaluate a model.
 
 1. Expand the **Model Training** section in the pane on the left, and drag a **Train Model** module to the canvas, under the **Split Data** module. Then connect the *Result dataset1* (left) output of the **Split Data** module to the *Dataset* (right) input of the **Train Model** module.
+
 2. The model we're training will predict the **Diabetic** value, so select the **Train Model** module and modify its settings to set the **Label column** to  **Diabetic** (matching the case and spelling exactly!)
 
     ![new-pipeline](images/tm.png)
@@ -73,6 +123,7 @@ With the data prepared and split into training and validation datasets, you're r
     ![new-pipeline](images/tcl.png)
 
 4. To test the trained model, we need to use it to score the validation dataset we held back when we split the original data. Expand the **Model Scoring & Evaluation** section and drag a **Score Model** module to the canvas, below the **Train Model** module. Then connect the output of the **Train Model** module to the **Trained model** (left) input of the **Score Model** module; and drag the **Results dataset2** (right) output of the **Split Data** module to the **Dataset** (right) input of the **Score Model** module.
+
 5. To evaluate how well the model performs, we need to look at some metrics generated by scoring the validation dataset. From the **Model Scoring & Evaluation** section, drag an **Evaluate Model** module to the canvas, under the **Score Model** module, and connect the output of the **Score Model** module to the **Score dataset** (left) input of the **Evaluate Model** module.
 
     ![new-pipeline](images/em.png)
@@ -92,6 +143,7 @@ With the data flow steps defined, you're now ready to run the training pipeline 
     **Tip**: While it's running, you can view the pipeline and experiment that have been created in the **Pipelines** and **Experiments** pages. Switch back to the **Visual Diabetes Training** pipeline on the **Designer** page when you're done.
 
 3. After the **Normalize Data** module has completed, select it, and in the **Settings** pane, on the **Outputs + logs** tab, under **Data outputs** in the **Transformed dataset** section, click the **Visualize** icon, and note that you can view statistics and distribution visualizations for the transformed columns.
+
 4. Close the **Normalize Data** visualizations and wait for the rest of the modules to complete. Then visualize the output of the **Evaluate Model** module to see the performance metrics for the model.
 
     **Note**: The performance of this model isn't all that great, partly because we performed only minimal feature engineering and pre-processing. You could try some different classification algorithms and compare the results (you can connect the outputs of the **Split Data** module to multiple **Train Model** and **Score Model** modules, and you can connect a second scored model to the **Evaluate Model** module to see a side-by-side comparison). The point of the exercise is simply to introduce you to the designer interface, not to train a perfect model!
