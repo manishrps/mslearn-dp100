@@ -218,10 +218,16 @@ Now you have an inference pipeline for real-time inferencing, which you can depl
 > **Note**: In this exercise, you'll deploy the web service to to an Azure Container Instance (ACI). This type of compute is created dynamically, and is useful for development and testing. For production, you should create an *inference cluster*, which provide an Azure Kubernetes Service (AKS) cluster that provides better scalability and security.
 
 1. If the **Predict Diabetes** inference pipeline has not yet finished running, await it's completion. Then visualize the **Result dataset** output of the **Execute Python Script** module to see the predicted labels and probabilities for the three patient observations in the input data.
+
 2. At the top right, click **Deploy**, and deploy a new real-time endpoint, using the following settings:
     -  **Name**: designer-predict-diabetes
     -  **Description**: Predict diabetes.
     - **Compute type**: Azure Container Instance
+
+    ![new-pipeline](images/deploy.png)
+    
+    ![new-pipeline](images/deploy2.png)    
+
 3. Wait for the web service to be deployed - this can take several minutes. The deployment status is shown at the top left of the designer interface.
 
 ## Test the web service
