@@ -235,10 +235,25 @@ Now you have an inference pipeline for real-time inferencing, which you can depl
 Now you can test your deployed service from a client application - in this case, you'll use a notebook.
 
 1. On the **Endpoints** page, open the **designer-predict-diabetes** real-time endpoint.
+
+    ![new-pipeline](images/end.png)
+
 2. When the **designer-predict-diabetes** endpoint opens, on the **Consume** tab, note the **REST endpoint** and **Primary key** values.
+
+    ![new-pipeline](images/endpointdetails.png)
+
 3. With the **Consume** page for the **designer-predict-diabetes** service page open in your browser, open a new browser tab and open a second instance of Azure Machine Learning studio. Then in the new tab, view the **Notebooks** page.
+
 4. In the **Notebooks** page, under **My files**, browse to the **Users/mslearn-dp100** folder where you cloned the notebook repository, and open the **Get Designer Prediction** notebook.
+
+    ![new-pipeline](images/startnotebook.png)
+
 5. When the notebook has opened, ensure that the compute instance you created previously is selected in the **Compute** box, and that it has a status of **Running**.
+
 6. In the notebook, replace the **ENDPOINT** and **PRIMARY_KEY** placeholders with the values for your service, which you can copy from the **Consume** tab on the page for your endpoint.
+
+    ![new-pipeline](images/endpoint.png)
+
 7. Run the code cell and view the output returned by your web service.
 
+    ![new-pipeline](images/final2.png)
