@@ -248,7 +248,7 @@ Now you can test your deployed service from a client application - in this case,
 
     ![new-pipeline](images/startnotebook.png)
 
-5. When the notebook has opened, ensure that the compute instance you created previously is selected in the **Compute** box, and that it has a status of **Running**.
+5. When the notebook has opened, ensure that the compute instance **Notebook-{DeploymentID}** is selected in the **Compute** box, and that it has a status of **Running**.
 
 6. In the notebook, replace the **ENDPOINT** and **PRIMARY_KEY** placeholders with the values for your service, which you can copy from the **Consume** tab on the page for your endpoint.
 
