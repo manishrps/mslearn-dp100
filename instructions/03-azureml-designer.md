@@ -7,9 +7,22 @@ Azure Machine Learning *designer* provides a drag & drop environment in which yo
 To get started with designer, first you must create a pipeline and add the dataset you want to work with.
 
 1. In Azure Machine Learning studio, view the **Designer** page and create a new pipeline.
+
+    ![new-pipeline](images/newpipeline.png)
+
 2. In the **Settings** pane, change the default pipeline name (**Pipeline-Created-on-*date***) to **Visual Diabetes Training** (if the **Settings** pane is not visible, click the **&#9881;** icon next to the pipeline name at the top).
+
+    ![new-pipeline](images/namechange.png)
+
 3. Note that you need to specify a compute target on which to run the pipeline. In the **Settings** pane, click **Select compute target** and select your compute cluster.
+
+    ![new-pipeline](images/computetarget.png)
+    ![new-pipeline](images/selecttarget.png)
+
 4. On the left side of the designer, expand the **Datasets** section, and drag the **diabetes dataset** dataset onto the canvas.
+
+    ![new-pipeline](images/dd.png)
+
 5. Select the **diabetes dataset** module on the canvas. Then right-click it, and on the **Visualize** menu, select **Dataset output**.
 6. Review the schema of the data, noting that you can see the distributions of the various columns as histograms. Then close the visualization.
 
@@ -19,6 +32,9 @@ Before you can train a model, you typically need to apply some preprocessing tra
 
 1. In the pane on the left, expand the **Data Transformation** section, which contains a wide range of modules you can use to transform data before model training.
 2. Drag a **Normalize Data** module to the canvas, below the **diabetes dataset** module. Then connect the output from the **diabetes dataset** module to the input of the **Normalize Data** module.
+
+    ![new-pipeline](images/connection.png)
+
 3. Select the **Normalize Data** module and view its settings, noting that it requires you to specify the transformation method and the columns to be transformed. Then, leaving the transformation as **ZScore**, edit the columns to includes the following column names:
     * PlasmaGlucose
     * DiastolicBloodPressure
@@ -26,6 +42,9 @@ Before you can train a model, you typically need to apply some preprocessing tra
     * SerumInsulin
     * BMI
     * DiabetesPedigree
+
+    ![new-pipeline](images/editcolumn.png)
+    ![new-pipeline](images/select.png)    
 
     **Note**: We're normalizing the numeric columns put them on the same scale, and avoid columns with large values dominating model training. You'd normally apply a whole bunch of pre-processing transformations like this to prepare your data for training, but we'll keep things simple in this exercise.
 
@@ -35,6 +54,8 @@ Before you can train a model, you typically need to apply some preprocessing tra
     * **Fraction of rows in the first output dataset**: 0.7
     * **Random seed**: 123
     * **Stratified split**: False
+
+    ![new-pipeline](images/splitdata.png)
 
 ## Add model training modules
 
