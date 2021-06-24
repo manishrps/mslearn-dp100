@@ -101,7 +101,7 @@ A lot of data science and machine learning experimentation is performed by runni
 
 4. When the command has completed, in the **Files** pane, click **&#8635;** to refresh the view and verify that a new **Users/*odl_user_{DeploymentID}*/mslearn-dp100** folder has been created. This folder contains multiple **.ipynb** notebook files.
 
-    ![](images/files.png)
+    ![](images/module1/3.png)
 
 5. Close the terminal pane, terminating the session.
 6. In the **Users/mslearn-dp100** or **Users/*{Username}*/mslearn-dp100** folder, open the **Get Started with Notebooks** notebook. Then read the notes and follow the instructions it contains.
