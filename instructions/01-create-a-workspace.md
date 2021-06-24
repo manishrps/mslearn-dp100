@@ -87,7 +87,7 @@ One of the benefits of `Azure Machine Learning` is the ability to create cloud-b
 A lot of data science and machine learning experimentation is performed by running code in *notebooks*. Your compute instance includes fully featured Python notebook environments (*Jupyter* and *JuypyterLab*) that you can use for extensive work, but for basic notebook editing, you can use the built-in **Notebooks** page in Azure Machine learning studio.
 
 1. In Azure Machine Learning studio, view the **Notebooks** page on the left panel. Close any pop-ups coming up.
-2. Open a **Terminal**, and ensure that its **Compute** is set to your compute instance and that the current path is the **/users/*your-user-name*** folder.(Here the user-name will be odl_user_{DeploymentID}, so please check in terminal if the directory is ...users/odl_user_{DeploymentID}$. please check below image for reference)
+2. Open a **Terminal** (click on the icon shown in the below image on the top of the left pane), and ensure that its **Compute** is set to your compute instance and that the current path is the **/users/*your-user-name*** folder.(Here the user-name will be odl_user_{DeploymentID}, so please check in terminal if the directory is ...users/odl_user_{DeploymentID}$. please check below image for reference)
 
     ![](images/module1/1.png)
 
