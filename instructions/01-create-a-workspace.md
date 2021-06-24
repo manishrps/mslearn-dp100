@@ -87,13 +87,11 @@ One of the benefits of `Azure Machine Learning` is the ability to create cloud-b
 A lot of data science and machine learning experimentation is performed by running code in *notebooks*. Your compute instance includes fully featured Python notebook environments (*Jupyter* and *JuypyterLab*) that you can use for extensive work, but for basic notebook editing, you can use the built-in **Notebooks** page in Azure Machine learning studio.
 
 1. In Azure Machine Learning studio, view the **Notebooks** page on the left panel. Close any pop-ups coming up.
-2. On the **Files** pane menu open a **Terminal**, and ensure its **Compute** is set to your compute instance.
+2. Open a **Terminal**, and ensure that its **Compute** is set to your compute instance and that the current path is the **/users/*your-user-name*** folder.(here the user-name will be odl_user_{DeploymentID}, so please check in terminal if its users/odl_user_{DeploymentID}. Its possible to change the location just be aware of the path where you will clone the repo. )
 
     ![](images/notebook.png)
 
 3. Enter the following commands to clone a Git repository containing notebooks, data, and other files to your workspace:
-
-   - Use cd Users or cd .. to change into Users directory (then run the following command)
 
     ```bash
     git clone https://github.com/MicrosoftLearning/mslearn-dp100
