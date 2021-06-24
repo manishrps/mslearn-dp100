@@ -171,7 +171,7 @@ After you've used automated machine learning to train some models, you can deplo
 2. Use the **Deploy** button to deploy the model with the following settings:
     - **Name**: auto-predict-diabetes
     - **Description**: Predict diabetes
-    - **Compute type**: Azure Container Instance
+    - **Compute type**: Azure Container Instance (ACI)
     - **Enable authentication**: Selected
 
     ![](images/predectivestep2.png)
