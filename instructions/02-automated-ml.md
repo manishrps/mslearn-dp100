@@ -70,7 +70,7 @@ Now that you have some compute resources that you can use to process data, you'l
         * **File format**: Delimited
         * **Delimiter**: Comma
         * **Encoding**: UTF-8
-        * **Column headers**: Use headers from first file
+        * **Column headers**: Only first file has headers
         * **Skip rows**: None
         
     ![](images/datasets3.png)
