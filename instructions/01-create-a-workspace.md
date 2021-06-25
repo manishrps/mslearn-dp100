@@ -86,27 +86,25 @@ One of the benefits of `Azure Machine Learning` is the ability to create cloud-b
 
 A lot of data science and machine learning experimentation is performed by running code in *notebooks*. Your compute instance includes fully featured Python notebook environments (*Jupyter* and *JuypyterLab*) that you can use for extensive work, but for basic notebook editing, you can use the built-in **Notebooks** page in Azure Machine learning studio.
 
-1. In Azure Machine Learning studio, view the **Notebooks** page on the left panel.
-2. On the **Files** pane menu open a **Terminal**, and ensure its **Compute** is set to your compute instance.
+1. In Azure Machine Learning studio, view the **Notebooks** page on the left panel. Close any pop-ups coming up.
+2. Open a **Terminal** (click on the icon shown in the below image on the top of the left pane), and ensure that its **Compute** is set to your compute instance and that the current path is the **/users/*your-user-name*** folder.(Here the user-name will be odl_user_{DeploymentID}, so please check in terminal if the directory is ...users/odl_user_{DeploymentID}$. please check below image for reference)
 
-    ![](images/notebook.png)
+    ![](images/module1/1.png)
 
 3. Enter the following commands to clone a Git repository containing notebooks, data, and other files to your workspace:
-
-   - Use cd Users or cd .. to change into Users directory (then run the following command)
 
     ```bash
     git clone https://github.com/MicrosoftLearning/mslearn-dp100
     ```
 
-    ![](images/terminal.png)
+    ![](images/module1/2.png)
 
-4. When the command has completed, in the **Files** pane, click **&#8635;** to refresh the view and verify that a new **Users/mslearn-dp100** or **Users/*{Username}*/mslearn-dp100** folder has been created. This folder contains multiple **.ipynb** notebook files.
+4. When the command has completed, in the **Files** pane, click **&#8635;** to refresh the view and verify that a new **Users/*odl_user_{DeploymentID}*/mslearn-dp100** folder has been created. This folder contains multiple **.ipynb** notebook files.
 
-    ![](images/files.png)
+    ![](images/module1/3.png)
 
 5. Close the terminal pane, terminating the session.
-6. In the **Users/mslearn-dp100** or **Users/*{Username}*/mslearn-dp100** folder, open the **Get Started with Notebooks** notebook. Then read the notes and follow the instructions it contains.
+6. In the **Users/*odl_user_{DeploymentID}*/mslearn-dp100** folder, open the **Get Started with Notebooks** notebook. Then read the notes and follow the instructions it contains.
 
 > **Tip**: To run a code cell, select the cell you want to run and then use the **&#9655;** button to run it.
 
