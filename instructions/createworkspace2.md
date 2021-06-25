@@ -50,8 +50,8 @@
 
 1. Click **&#8635;** to refresh the view and verify that a new **Users/mslearn-dp100** folder has been created. This folder contains multiple **.ipynb** notebook files.
 
-   > **Tip**: To run a code cell, select the cell you want to run and then use the **&#9655;** button to run it.
+   > **Tip**: To run a code cell in the notebook, select the cell you want to run and then use the **&#9655;** button to run it.
 
-1. If asked to provide **compute cluster** during the lab , then please provide compute cluster as **aml-compute**.
+1. **Important note:-** If asked to provide **compute cluster** while running the notebook, then please provide compute cluster as **aml-compute**.
 
 1. Click on **Next** to continue to the next module in this lab.
