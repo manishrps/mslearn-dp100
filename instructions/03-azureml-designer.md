@@ -25,7 +25,7 @@ Now that you have some compute resources that you can use to process data, you'l
     
     * **Datastore and file selection**:
         * **Select or create a datastore**: Currently selected datastore
-        * **Select files for your dataset**: Browse to the **diabetes.csv** file you downloaded.
+        * **Select files for your dataset**: click **upload** and Browse to the **diabetes.csv** file you downloaded.
         * **Upload path**: *Leave the default selection*
         * **Skip data validation**: Not selected
         
