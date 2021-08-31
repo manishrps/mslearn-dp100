@@ -87,8 +87,6 @@ Now that you have some compute resources that you can use to process data, you'l
 
 4. After the dataset has been created, open it and view the **Explore** page to see a sample of the data. This data represents details from patients who have been tested for diabetes, and you will use it to train a model that predicts the likelihood of a patient testing positive for diabetes based on clinical measurements.
 
-4. After the dataset has been created, open it and view the **Explore** page to see a sample of the data. This data represents details from patients who have been tested for diabetes, and you will use it to train a model that predicts the likelihood of a patient testing positive for diabetes based on clinical measurements.
-
     ![](images/datasets5.png)
     
     > **Note**: You can optionally generate a *profile* of the dataset to see more statistical details.
