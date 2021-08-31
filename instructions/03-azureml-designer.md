@@ -8,7 +8,7 @@ Azure Machine Learning *designer* provides a drag & drop environment in which yo
 
 Now that you have some compute resources that you can use to process data, you'll need a way to store and ingest the data to be processed.
 
-1. On the LabVM browser open new tab and browse https://aka.ms/diabetes-data. Then save this as a local file named **diabetes.csv** (it doesn't matter where you save it).
+1. On the LabVM browser open new tab and browse https://aka.ms/diabetes-data. Give **Ctri+S** to save this as a local file named **diabetes.csv** (it doesn't matter where you save it).
 
 2. In Azure Machine Learning studio, view the **Datasets** page on the left panel. Datasets represent specific data files or tables that you plan to work with in Azure ML.
 
