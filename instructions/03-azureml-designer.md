@@ -29,16 +29,19 @@ Now that you have some compute resources that you can use to process data, you'l
         * **Upload path**: *Leave the default selection*
         * **Skip data validation**: Not selected
         
-    ![](images/page2.png)        
+    ![](images/19.png) 
+    
+    ![](images/20.png) 
+    
     
     * **Settings and preview**:
         * **File format**: Delimited
         * **Delimiter**: Comma
         * **Encoding**: UTF-8
-        * **Column headers**: Use headers from first file
+        * **Column headers**: only first file has headers
         * **Skip rows**: None
         
-    ![](images/datasets3.png)
+    ![](images/21.png)
     
     * **Schema**:
         * Include all columns other than **Path**
