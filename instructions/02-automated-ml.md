@@ -157,7 +157,9 @@ After the experiment has finished; you can review the best performing model that
 
     ![](images/step44.png)
 
-5. Select the **Explanations** tab, and view the **Global Importance** chart. This shows the extent to which each feature in the dataset influences the label prediction.
+5. Select the **Explanations(preview)** tab, and view the **Global Importance** chart. This shows the extent to which each feature in the dataset influences the label prediction.
+
+   **Note**: It will take few minutes to reflect.
 
 ## Deploy a predictive service
 
