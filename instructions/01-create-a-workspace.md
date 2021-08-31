@@ -64,23 +64,28 @@ One of the benefits of `Azure Machine Learning` is the ability to create cloud-b
 
     ![](images/compute.png)
 
-2. On the **Compute instances** tab, add a new compute instance with the following settings. You'll use this as a workstation to run code in notebooks.
-    - **Region**: *The same region as your workspace*
+2. On the **Compute instances** tab, Click on **Add** to add a new compute instance with the following settings. You'll use this as a workstation to run code in notebooks.
+    - **Compute name**: *enter a unique name*
+    - **Location**: *The same region as your workspace*
     - **Virtual machine type**: CPU
     - **Virtual machine size**: Standard_DS11_v2 (Click on **Select from all options** if you can't find it in the list)
-    - Select **Next**
-    - **Compute name**: *enter a unique name*
+    - Select **Next:Advanced Settings**
     - **Enable SSH access**: Unselected (you can use this to enable direct access to the virtual machine using an SSH client)
-    - **Show advanced settings**: Note the following settings, but do not select them:
+    - Note the following settings, but do not select them:
         - **Enable virtual network**: Unselected (you would typically use this in an enterprise environment to enhance network security)
         - **Assign to another user**: Unselected (you can use this to assign a compute instance to a data scientist)
 
-    ![](images/computeinstance.png)
-    ![](images/computeinstance2.png)
+    ![](images/12.png)
+    
+    ![](images/13.png)
+    
+    ![](images/14.png)
 
 3. Click on the **Create** button
 
 4. Wait for the compute instance to start and it's status to change to **Running**.
+
+    ![](images/16.png)
 
 ## Clone and run a notebook
 
