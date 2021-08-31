@@ -157,9 +157,13 @@ After the experiment has finished; you can review the best performing model that
 
     ![](images/step44.png)
 
+
 5. Select the **Explanations(preview)** tab, and view the **Global Importance** chart. This shows the extent to which each feature in the dataset influences the label prediction.
 
    **Note**: It will take few minutes to reflect.
+   
+6. Select the **Explanations** tab, select an **Explanation ID**, and then view the **Aggregate Importance** page. This shows the extent to which each feature in the dataset influences the label prediction.
+
 
 ## Deploy a predictive service
 
@@ -173,12 +177,12 @@ After you've used automated machine learning to train some models, you can deplo
 2. Use the **Deploy** button to deploy the model with the following settings:
     - **Name**: auto-predict-diabetes
     - **Description**: Predict diabetes
-    - **Compute type**: Azure Container Instance
+    - **Compute type**: Azure Container Instance (ACI)
     - **Enable authentication**: Selected
 
     ![](images/predectivestep2.png)
 
-3. Wait for the deployment to start - this may take a few seconds. Then, on the **Model** tab, in the **Model summary** section, observe the **Deploy status** for the **auto-predict-diabetes** service, which should be **Running**. Wait for this status to change to **Successful**. You may need to select **&#8635; Refresh** periodically.
+3. Wait for the deployment to start - this may take a few seconds. Then, on the **Model** tab, in the **Model summary** section, observe the **Deploy status** for the **auto-predict-diabetes** service, which should be **Running**. Wait for this status to change to **Successful**. You may need to select **&#8635; Refresh** periodically. **NOTE** This can take a while
 
     ![](images/predectivestep3.png)
 

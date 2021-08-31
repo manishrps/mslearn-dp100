@@ -1,6 +1,8 @@
 
 # Clone the repo to perform the lab
 
+1. **It is necessary that after completing this exercise , then proceed to the next one**.
+
 1. After signed into azure portal using the credentials provided, Search for **Resource Groups** in the search bar.
 
 1. Then you will find the **dp-100-xxxxxx**, where xxxxxx is the deployment id of the lab. Click on **dp-100-xxxxxx** to find the resources for the lab.
@@ -48,8 +50,8 @@
 
 1. Click **&#8635;** to refresh the view and verify that a new **Users/mslearn-dp100** folder has been created. This folder contains multiple **.ipynb** notebook files.
 
-   > **Tip**: To run a code cell, select the cell you want to run and then use the **&#9655;** button to run it.
+   > **Tip**: To run a code cell in the notebook, select the cell you want to run and then use the **&#9655;** button to run it.
 
-1. If asked to provide **compute cluster** during the lab , then please provide compute cluster name as **aml-compute**.
+1. If asked to provide **compute cluster** while running the notebook, then please provide compute cluster as **aml-compute**.
 
 1. Click on **Next** to continue to the next module in this lab.
