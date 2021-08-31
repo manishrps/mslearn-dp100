@@ -73,7 +73,7 @@ To get started with designer, first you must create a pipeline and add the datas
 
     ![new-pipeline](images/dd.png)
 
-5. Select the **diabetes dataset** module on the canvas. Then right-click it, and on the **Visualize** menu, select **Dataset output**.
+5. Select the **diabetes dataset** module on the canvas. Then right-click it, and on the **Preview** menu, select **Dataset output**.
 
 6. Review the schema of the data, noting that you can see the distributions of the various columns as histograms. Then close the visualization.
 
