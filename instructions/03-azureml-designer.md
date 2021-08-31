@@ -149,7 +149,7 @@ With the data flow steps defined, you're now ready to run the training pipeline 
 
     ![new-pipeline](images/visualize.png)
 
-4. Close the **Normalize Data** visualizations and wait for the rest of the modules to complete. Then visualize the output of the **Evaluate Model** module to see the performance metrics for the model.
+4. Close the **Normalize Data** visualizations and wait for the rest of the modules to complete. Then preview the output of the **Evaluate Model** module to see the performance metrics for the model.
 
     ![new-pipeline](images/emvisualize.png)
 
