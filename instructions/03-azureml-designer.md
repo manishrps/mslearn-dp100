@@ -8,7 +8,7 @@ Azure Machine Learning *designer* provides a drag & drop environment in which yo
 
 Now that you have some compute resources that you can use to process data, you'll need a way to store and ingest the data to be processed.
 
-1. On the LabVM browser open new tab and browse https://aka.ms/diabetes-data. Then save this as a local file named **diabetes.csv** (it doesn't matter where you save it).
+1. On the LabVM browser open new tab and browse https://aka.ms/diabetes-data. Give **Ctri+S** to save this as a local file named **diabetes.csv** (it doesn't matter where you save it).
 
 2. In Azure Machine Learning studio, view the **Datasets** page on the left panel. Datasets represent specific data files or tables that you plan to work with in Azure ML.
 
@@ -25,20 +25,23 @@ Now that you have some compute resources that you can use to process data, you'l
     
     * **Datastore and file selection**:
         * **Select or create a datastore**: Currently selected datastore
-        * **Select files for your dataset**: Browse to the **diabetes.csv** file you downloaded.
+        * **Select files for your dataset**: click **upload** and Browse to the **diabetes.csv** file you downloaded.
         * **Upload path**: *Leave the default selection*
         * **Skip data validation**: Not selected
         
-    ![](images/page2.png)        
+    ![](images/19.png) 
+    
+    ![](images/20.png) 
+    
     
     * **Settings and preview**:
         * **File format**: Delimited
         * **Delimiter**: Comma
         * **Encoding**: UTF-8
-        * **Column headers**: Use headers from first file
+        * **Column headers**: only first file has headers
         * **Skip rows**: None
         
-    ![](images/datasets3.png)
+    ![](images/21.png)
     
     * **Schema**:
         * Include all columns other than **Path**
@@ -70,7 +73,7 @@ To get started with designer, first you must create a pipeline and add the datas
 
     ![new-pipeline](images/dd.png)
 
-5. Select the **diabetes dataset** module on the canvas. Then right-click it, and on the **Visualize** menu, select **Dataset output**.
+5. Select the **diabetes dataset** module on the canvas. Then right-click it, and on the **Preview** menu, select **Dataset output**.
 
 6. Review the schema of the data, noting that you can see the distributions of the various columns as histograms. Then close the visualization.
 
@@ -142,11 +145,11 @@ With the data flow steps defined, you're now ready to run the training pipeline 
 
     **Tip**: While it's running, you can view the pipeline and experiment that have been created in the **Pipelines** and **Experiments** pages. Switch back to the **Visual Diabetes Training** pipeline on the **Designer** page when you're done.
 
-3. After the **Normalize Data** module has completed, select it, and in the **Settings** pane, on the **Outputs + logs** tab, under **Data outputs** in the **Transformed dataset** section, click the **Visualize** icon, and note that you can view statistics and distribution visualizations for the transformed columns.
+3. After the **Normalize Data** module has completed, select it, and in the **Settings** pane, on the **Outputs + logs** tab, under **Data outputs** in the **Transformed dataset** section, click the **preview** icon, and note that you can view statistics and distribution visualizations for the transformed columns.
 
     ![new-pipeline](images/visualize.png)
 
-4. Close the **Normalize Data** visualizations and wait for the rest of the modules to complete. Then visualize the output of the **Evaluate Model** module to see the performance metrics for the model.
+4. Close the **Normalize Data** visualizations and wait for the rest of the modules to complete. Then preview the output of the **Evaluate Model** module to see the performance metrics for the model.
 
     ![new-pipeline](images/emvisualize.png)
 

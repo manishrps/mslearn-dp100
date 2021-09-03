@@ -43,7 +43,7 @@ To use automated machine learning, you require compute on which to run the model
 
 Now that you have some compute resources that you can use to process data, you'll need a way to store and ingest the data to be processed.
 
-1. On the LabVM browser open new tab and browse https://aka.ms/diabetes-data. Then save this as a local file named **diabetes.csv** (it doesn't matter where you save it).
+1. On the LabVM browser open new tab and browse https://aka.ms/diabetes-data. Click **ctrl+s** to save this as a local file named **diabetes.csv** (it doesn't matter where you save it).
 
 2. In Azure Machine Learning studio, view the **Datasets** page on the left panel. Datasets represent specific data files or tables that you plan to work with in Azure ML.
 
@@ -60,20 +60,22 @@ Now that you have some compute resources that you can use to process data, you'l
     
     * **Datastore and file selection**:
         * **Select or create a datastore**: Currently selected datastore
-        * **Select files for your dataset**: Browse to the **diabetes.csv** file you downloaded.
+        * **Select files for your dataset**: click on upload and Browse to the **diabetes.csv** file you downloaded.
         * **Upload path**: *Leave the default selection*
         * **Skip data validation**: Not selected
         
-    ![](images/page2.png)        
+    ![](images/19.png)  
+    
+    ![](images/20.png)
     
     * **Settings and preview**:
         * **File format**: Delimited
         * **Delimiter**: Comma
         * **Encoding**: UTF-8
-        * **Column headers**: Only first file has headers
+        * **Column headers**: only first file has headers
         * **Skip rows**: None
         
-    ![](images/datasets3.png)
+    ![](images/21.png)
     
     * **Schema**:
         * Include all columns other than **Path**
@@ -82,8 +84,6 @@ Now that you have some compute resources that you can use to process data, you'l
         * Do not profile the dataset after creation
         
     ![](images/datasets4.png)
-
-4. After the dataset has been created, open it and view the **Explore** page to see a sample of the data. This data represents details from patients who have been tested for diabetes, and you will use it to train a model that predicts the likelihood of a patient testing positive for diabetes based on clinical measurements.
 
 4. After the dataset has been created, open it and view the **Explore** page to see a sample of the data. This data represents details from patients who have been tested for diabetes, and you will use it to train a model that predicts the likelihood of a patient testing positive for diabetes based on clinical measurements.
 
@@ -157,7 +157,13 @@ After the experiment has finished; you can review the best performing model that
 
     ![](images/step44.png)
 
-5. Select the **Explanations** tab, select an **Explanation ID**, and then view the **Aggregate Importance** page. This shows the extent to which each feature in the dataset influences the label prediction.
+
+5. Select the **Explanations(preview)** tab, and view the **Global Importance** chart. This shows the extent to which each feature in the dataset influences the label prediction.
+
+   **Note**: It will take few minutes to reflect.
+   
+6. Select the **Explanations** tab, select an **Explanation ID**, and then view the **Aggregate Importance** page. This shows the extent to which each feature in the dataset influences the label prediction.
+
 
 ## Deploy a predictive service
 
