@@ -65,7 +65,7 @@ One of the benefits of `Azure Machine Learning` is the ability to create cloud-b
     ![](images/compute.png)
 
 2. On the **Compute instances** tab, Click on **Add** to add a new compute instance with the following settings. You'll use this as a workstation to run code in notebooks.
-    - **Compute name**: *enter a unique name eg:machinelearning-{DeploymentID}*
+    - **Compute name**: *enter a unique name eg:machinelearning{DeploymentID}*
     - **Location**: *The same region as your workspace*
     - **Virtual machine type**: CPU
     - **Virtual machine size**: Standard_DS11_v2 (Click on **Select from all options** if you can't find it in the list)
@@ -92,7 +92,10 @@ One of the benefits of `Azure Machine Learning` is the ability to create cloud-b
 A lot of data science and machine learning experimentation is performed by running code in *notebooks*. Your compute instance includes fully featured Python notebook environments (*Jupyter* and *JuypyterLab*) that you can use for extensive work, but for basic notebook editing, you can use the built-in **Notebooks** page in Azure Machine learning studio.
 
 1. In Azure Machine Learning studio, view the **Notebooks** page on the left panel. Close any pop-ups coming up.
-2. Open a **Terminal** (click on the icon shown in the below image on the top of the left pane), and ensure that its **Compute** is set to your compute instance and that the current path is the **/users/*your-user-name*** folder.(Here the user-name will be odl_user_{DeploymentID}, so please check in terminal if the directory is ...users/odl_user_{DeploymentID}$. please check below image for reference)
+
+2. Click  on **Use terminal to clone from git repo**.
+
+3. Open a **Terminal** (click on the icon shown in the below image on the top of the left pane), and ensure that its **Compute** is set to your compute instance and that the current path is the **/users/*your-user-name*** folder.(Here the user-name will be odl_user_{DeploymentID}, so please check in terminal if the directory is ...users/odl_user_{DeploymentID}$. please check below image for reference)
 
     ![](images/module1/1.png)
 
