@@ -144,7 +144,7 @@ After the experiment has finished; you can review the best performing model that
 
 1. On the **Details** tab of the automated machine learning run, note the best model summary.
 
-2. Select the **Algorithm name** for the best model to view the child-run that produced it.
+2. Select the **Algorithm name** for the **best model** to view the child-run that produced it.
 
  - The best model is identified based on the evaluation metric you specified (*AUC_Weighted*). To calculate this metric, the training process used some of the data to train the model, and applied a technique called *cross-validation* to iteratively test the trained model with data it wasn't trained with and compare the predicted value with the actual known value. 
  - From these comparisons, a *confusion matrix* of true-positives, false-positives,true-negatives, and false-negatives is tabulated and additional classification metrics calculated - including a Receiving Operator Curve (ROC) chart that compares the True-Positive rate and False-Positive rate. The area under this curve (AUC) us a common metric used to evaluate classification performance.
@@ -174,7 +174,7 @@ After you've used automated machine learning to train some models, you can deplo
 
 1. Select the **Details** tab for the run that produced the best model.
 
-2. Use the **Deploy** button to deploy the model with the following settings:
+2. Click on the **Deploy** button and select **Deploy to Web service** to deploy the model with the following settings:
     - **Name**: auto-predict-diabetes
     - **Description**: Predict diabetes
     - **Compute type**: Azure Container Instance (ACI)
