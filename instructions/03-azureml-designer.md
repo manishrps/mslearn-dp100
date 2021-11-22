@@ -204,6 +204,8 @@ def azureml_main(dataframe1 = None, dataframe2 = None):
     return scored_results
 ```
 
+> **Note**: After pasting the code in the **Execute Python Script** module, verify that the code looks similar to the code above. Indentations are important in Python and the module will fail if the indentations are not copied correctly. 
+
    ![new-pipeline](images/python.png)
 
 9. Verify that your pipeline looks similar to the following:
