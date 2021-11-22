@@ -22,7 +22,7 @@ To use automated machine learning, you require compute on which to run the model
 
 4.  Click on **+ New** to add a new compute cluster with the following settings. You'll run the automated machine learning experiment on this cluster to take advantage of the ability to distribute the training runs across multiple compute nodes:
 
-    - **Region**: *The same region as your workspace*
+    - **Location**: *The same location as your workspace*
     - **Virtual Machine priority**: Dedicated
     - **Virtual Machine type**: CPU
     - **Virtual Machine size**: Standard_DS11_v2
@@ -115,7 +115,7 @@ In Azure Machine Learning, operations that you run are called *experiments*. Fol
         - **Additional configuration settings:**
             - **Primary metric**: Select **AUC_Weighted** *(more about this metric later!)*
             - **Explain best model**: Selected - *this option causes automated machine learning to calculate feature importance for the best model; making it possible to determine the influence of each feature on the predicted label.*
-            - **Blocked algorithms**: Leave all algorithms selected
+            - **Blocked algorithms**: Leave the default setting - *all algorithms can potentially be used when training*
             - **Exit criterion**:
                 - **Training job time (hours)**: 0.5 - *this causes the experiment to end after a maximum of 30 minutes.*
                 - **Metric score threshold**: 0.90 - *this causes the experiment to end if a model achieves a weighted AUC metric of 90% or higher.*
