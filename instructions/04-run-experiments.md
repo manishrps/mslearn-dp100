@@ -29,7 +29,7 @@ The Azure Machine Learning SDK is installed by default on your compute instance.
     ![](images/img7.png)
     ![](images/img8.png)    
 
-3. Enter the following command to update the Azure ML SDK:
+3. Enter the following command to verify that the Azure ML SDK is installed:
 
     ```bash
     pip show azureml-sdk
@@ -55,7 +55,7 @@ The Azure Machine Learning SDK is installed by default on your compute instance.
 
 Experiments in Azure Machine Learning need to be initiated from some sort of *control* layer; often a script or program. In this exercise, you'll use a notebook to control experiments.
 
-1. In the Jupyter home page, browse to the **Users/mslearn-dp100** or **Users/*{Username}*/mslearn-dp100** folder where you cloned the notebook repository.
+1. In the Jupyter home page, browse to the **Users/*{Username}*/mslearn-dp100** folder where you cloned the notebook repository.
 
 2. Click on **Run Experiments** (04 - Run Experiments.ipynb) notebook to open in the new tab.
 
