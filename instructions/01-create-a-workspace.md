@@ -64,7 +64,7 @@ One of the benefits of `Azure Machine Learning` is the ability to create cloud-b
 
     ![](images/compute.png)
 
-2. On the **Compute instances** tab, Click on **Add** to add a new compute instance with the following settings. You'll use this as a workstation to run code in notebooks.
+2. On the **Compute instances** tab, Click on **NEW** to add a new compute instance with the following settings. You'll use this as a workstation to run code in notebooks.
     - **Compute name**: *enter a unique name eg:machinelearning{DeploymentID}*
     - **Location**: *The same region as your workspace*
     - **Virtual machine type**: CPU
