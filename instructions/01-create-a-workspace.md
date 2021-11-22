@@ -68,10 +68,11 @@ One of the benefits of `Azure Machine Learning` is the ability to create cloud-b
     - **Compute name**: *enter a unique name eg:machinelearning{DeploymentID}*
     - **Location**: *The same region as your workspace*
     - **Virtual machine type**: CPU
-    - **Virtual machine size**: Standard_DS11_v2 (Click on **Select from all options** if you can't find it in the list)
+    - **Total Available Quotas**:  This shows dedicated cores available.
+        - **Virtual machine size**: Standard_DS11_v2 
     - Select **Next:Advanced Settings**
-    - **Enable SSH access**: Unselected (you can use this to enable direct access to the virtual machine using an SSH client)
-    - Note the following settings, but do not select them:
+    - **Advanced settings**: Note the following settings, but do not select them:-
+        - **Enable SSH access**: Unselected (you can use this to enable direct access to the virtual machine using an SSH client)
         - **Enable virtual network**: Unselected (you would typically use this in an enterprise environment to enhance network security)
         - **Assign to another user**: Unselected (you can use this to assign a compute instance to a data scientist)
 
@@ -83,7 +84,7 @@ One of the benefits of `Azure Machine Learning` is the ability to create cloud-b
 
 3. Click on the **Create** button
 
-4. Wait for the compute instance to start and it's status to change to **Running**.
+4. Wait for the compute instance to start and its state to change to **Running**.
 
     ![](images/16.png)
 
@@ -91,18 +92,16 @@ One of the benefits of `Azure Machine Learning` is the ability to create cloud-b
 
 A lot of data science and machine learning experimentation is performed by running code in *notebooks*. Your compute instance includes fully featured Python notebook environments (*Jupyter* and *JuypyterLab*) that you can use for extensive work, but for basic notebook editing, you can use the built-in **Notebooks** page in Azure Machine learning studio.
 
-1. In Azure Machine Learning studio, view the **Notebooks** page on the left panel. Close any pop-ups coming up.
+1. In Azure Machine Learning studio, view the **Notebooks** page on the left panel. If a message describing new features is displayed, close it.
 
-2. Click  on **Use terminal to clone from git repo**.
-
-3. Open a **Terminal** (click on the icon shown in the below image on the top of the left pane), and ensure that its **Compute** is set to your compute instance and that the current path is the **/users/*your-user-name*** folder.(Here the user-name will be odl_user_{DeploymentID}, so please check in terminal if the directory is ...users/odl_user_{DeploymentID}$. please check below image for reference)
+2. Select **use terminal to clone from git repo** to open a terminal, and ensure that its **Compute** is set to your compute instance and that the current path is the **/users/your-user-name** folder.
 
     ![](images/module1/1.png)
 
 3. Enter the following commands to clone a Git repository containing notebooks, data, and other files to your workspace:
 
     ```bash
-    git clone https://github.com/MicrosoftLearning/mslearn-dp100
+    git clone https://github.com/MicrosoftLearning/mslearn-dp100 mslearn-dp100
     ```
 
     ![](images/module1/2.png)
