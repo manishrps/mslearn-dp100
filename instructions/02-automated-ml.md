@@ -106,13 +106,14 @@ In Azure Machine Learning, operations that you run are called *experiments*. Fol
     - **Configure run**:
         - **New experiment name**: mslearn-automl-diabetes
         - **Target column**: Diabetic (*this is the label the model will be trained to predict)*
-        - **Select compute cluster**: *the compute cluster you created previously*
+        - **Select compute type**: Compute cluster
+        - **Select Azure ML compute cluster**: *the compute cluster you created previously*
         
     ![](images/ste2configrun.png)
     
     - **Task type and settings**:
         - **Task type**: Classification
-        - **Additional configuration settings:**
+        - Select **View additional configuration settings** to open **Additional configurations**:
             - **Primary metric**: Select **AUC_Weighted** *(more about this metric later!)*
             - **Explain best model**: Selected - *this option causes automated machine learning to calculate feature importance for the best model; making it possible to determine the influence of each feature on the predicted label.*
             - **Blocked algorithms**: Leave the default setting - *all algorithms can potentially be used when training*
@@ -123,8 +124,13 @@ In Azure Machine Learning, operations that you run are called *experiments*. Fol
     ![](images/additionalconfigsettings.png)
     ![](images/additionalconfigsettings2.png)
 
-      - **Featurization settings:**
+      - Select **View featurization settings** to open **Featurization**:
             - **Enable featurization**: Selected - *this causes Azure Machine Learning to automatically preprocess the features before training.*
+
+   - **Select the validation and test type**:
+        - **Validation type**: Train-validation split
+        - **Percentage validation of data**: 30
+        - **Test dataset**: No test dataset required
    
     ![](images/featuredconfig1.png)
     ![](images/additionalconfigsettings3.png)
@@ -179,6 +185,7 @@ After you've used automated machine learning to train some models, you can deplo
     - **Description**: Predict diabetes
     - **Compute type**: Azure Container Instance (ACI)
     - **Enable authentication**: Selected
+    - **Use custom deployment assets**: Unselected
 
     ![](images/predectivestep2.png)
 
