@@ -9,7 +9,7 @@ In this exercise, you will create and explore an Azure Machine Learning workspac
 As its name suggests, a workspace is a centralized place to manage all of the Azure ML assets you need to work on a machine learning project.
 
 1. Open `Azure portal` in the virtual machine provided on the left side, login using the credentials provided in the **Environment Details** tab.
-2. On the top search bar, search for **machine learning** and select Machine learning then click on **+New** or **Create** to create a new **Machine Learning** resource, specifying the following settings:
+2. On the top search bar, search for **Azure Machine learning** and select Machine learning then click on **+New** or **Create** to create a new **Azure Machine Learning** resource, specifying the following settings:
 
     - **Subscription**: *Your Azure subscription*
     - **Resource group**: Select **dp-100-{DeploymentID}**
@@ -20,13 +20,7 @@ As its name suggests, a workspace is a centralized place to manage all of the Az
     - **Application insights**: *Note the default new application insights resource that will be created for your workspace*
     - **Container registry**: None (*one will be created automatically the first time you deploy a model to a container*)
 
-```
-Note: 
-    
-You can find the DeploymentID under the lab Environment Detail tab.
-    
-When you create an Azure Machine Learning workspace, you can use some advanced options to restrict access through a private endpoint and specify custom keys for data encryption. We won't use these options in this exercise - but you should be aware of them!
-```
+> **Note:** You can find the DeploymentID under the lab Environment Details tab. When you create an Azure Machine Learning workspace, you can use some advanced options to restrict access through a private endpoint and specify custom keys for data encryption. We won't use these options in this exercise - but you should be aware of them!
 
   ![](images/mlcreate.png)
 
