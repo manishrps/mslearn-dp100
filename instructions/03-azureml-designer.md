@@ -14,7 +14,7 @@ Now that you have some compute resources that you can use to process data, you'l
 
 3. Create a new dataset from local files, using the following settings:
 
-    ![](images/datasets1.png)
+    ![](images/DP-100.png)
     
     * **Basic Info**:
         * **Name**: diabetes dataset
