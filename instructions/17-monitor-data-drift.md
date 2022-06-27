@@ -32,7 +32,7 @@ In this exercise, the code to monitor data drift is provided in a notebook.
 
 >**Note**: If you see a pop up saying **Kernel Not Found**, From the dropdown select the **Python 3.8 - AzureML** and **Set Kernel**
 
-    ![](images/kernel-not-found.png)
+   ![](images/kernel-not-found.png)
 
 3. Then read the notes in the notebook, running each code cell in turn. To run each cell select and click on **Run** on the menu.
 
